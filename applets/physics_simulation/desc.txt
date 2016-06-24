@@ -1,0 +1,4 @@
+Physics Simulation uses the projectile motion principles taught in undergraduate physics classes to draw a graph of a 
+projectile under the influence of the earth's gravity. The user may input the angle of the initial velocity and optionally
+enter a value for wind resistance. The area under the curve (integral) and arc length (how far the projectile traveled in
+both the x and y directions) may also be calculated.

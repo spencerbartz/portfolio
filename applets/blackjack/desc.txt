@@ -1,0 +1,3 @@
+Blackjack is a single player, single deck card game in which the player plays against a computerized dealer using the
+typical Las Vegas rules (Dealer stands on 16). The player may double down, or split a pair, and bet any amount he or she
+wants to. All graphics and code are 100% original.
