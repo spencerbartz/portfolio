@@ -1,0 +1,5 @@
+An interpreter for the <a href="https://en.wikipedia.org/wiki/Brainfuck">Brainf**k programming language.</a>
+The Brainf**k source code is parsed in a recursive descent fashion to handle nested loop structures. Input is not
+currently supported so "," characters are ignored, however debugging of a program is possible by the addition of the "#" symbol.
+(Be sure to have your javascript console open to see debugger output). The interpreter now includes an ascii to Brainf**k
+converter. Thus you can convert ascii to Brainfuck code, and run it right in the interpreter!
