@@ -1,0 +1,3 @@
+Forums is a posting board application made with PHP, MySQL, and AJAX. Users can register, start new threads, post comments, edit comments, and delete comments.
+The CSS is a mixture of my own tinkering and tricks I have learned at W3Schools and stack overflow. The div rounding effects should work on the latest versions of
+Internet Explorer, Chrome, Firefox, and Safari.
