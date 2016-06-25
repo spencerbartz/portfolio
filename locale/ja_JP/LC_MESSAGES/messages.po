@@ -1,0 +1,134 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: portfolio website\n"
+"POT-Creation-Date: 2013-12-29 07:21+0900\n"
+"PO-Revision-Date: 2013-12-29 07:37+0900\n"
+"Last-Translator: spencer bartz <spencerbartz@gmail.com>\n"
+"Language-Team: spenerbartz.com <spencerbartz@gmail.com>\n"
+"Language: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: C:\\Program Files (x86)\\Apache Software Foundation"
+"\\Apache2.2\\htdocs\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: gettexttest.php:12
+msgid "Hello World!"
+msgstr "こんにちは"
+
+#: gettexttest.php:13
+msgid "How are you?"
+msgstr "お元気ですか？"
+
+#: index.php:23
+msgid "Spencer Bartz - Portfolio Website"
+msgstr "Spencer Bartz - ポートフォリオ・ウェブサイト"
+
+#: index.php:50
+msgid "Search Box"
+msgstr "検索フォーム"
+
+#: index.php:54
+msgid "Search"
+msgstr "検索"
+
+#: index.php:59
+msgid "Sidebar Menu"
+msgstr "サイドメニュー"
+
+#: index.php:61 php/util.php:24 php/util.php:40
+msgid "Home"
+msgstr "ホーム"
+
+#: index.php:62
+msgid "TemplateInfo"
+msgstr "テンプレート"
+
+#: index.php:63
+msgid "Sample Tags"
+msgstr "サンプルタッグ"
+
+#: index.php:64
+msgid "Premium Templates"
+msgstr "プレミアム テンプレート"
+
+#: index.php:104
+msgid "Welcome to <span class=\"white\">spencerbartz.com</span>"
+msgstr "<span class=\"white\">spencerbartz.com</span>へようこそ"
+
+#: index.php:109
+msgid ""
+"This site is a compilation of some of my programming projects in PHP, Java, "
+"Javascript, Python, and more."
+msgstr ""
+"このサイトの内容は私のPHP, Java, Javascript, Pythonなどのポートフォリオです。"
+
+#: index.php:110
+msgid ""
+"Web based projects can be run without installing additional software. Java "
+"and Python however require installation of"
+msgstr ""
+"ウェブプロジェクトはソフトウェアインストールなしに見られますが、JavaとPython"
+"は"
+
+#: index.php:111
+msgid ""
+"separate runtime environments. Links to those downloads can be found at the "
+"bottom of the page."
+msgstr "各々ランタイム環境のインストール必要があります。"
+
+#: index.php:114
+msgid "Read more"
+msgstr "続き"
+
+#: index.php:114
+msgid "Comments"
+msgstr "コメント"
+
+#: index.php:114
+msgid "Oct 01,"
+msgstr "10月1日"
+
+#: index.php:201
+msgid "Programming Languages"
+msgstr "プログラミング言語"
+
+#: index.php:210
+msgid "Programming Help / Tutorials"
+msgstr "プログラミング・チュートリアル"
+
+#: index.php:221
+msgid "Software Downloads"
+msgstr "ソフトウェア・ダウンロード"
+
+#: php/util.php:22
+msgid "Portfolio Website"
+msgstr " ポートフォリオ・ウェブサイト"
+
+#: php/util.php:24
+msgid "Contact"
+msgstr "連絡"
+
+#: php/util.php:24
+msgid "Japanese"
+msgstr "日本語"
+
+#: php/util.php:40
+msgid "PHP / MySQL / AJAX"
+msgstr "PHP / MySQL / AJAX"
+
+#: php/util.php:40
+msgid "Java Applets"
+msgstr "Java アプレット"
+
+#: php/util.php:40
+msgid "Java Applications"
+msgstr "Java アプリケーション"
+
+#: php/util.php:40
+msgid "JavaScript"
+msgstr "ジャヴァスクリプト"
