@@ -1,12 +1,5 @@
 <?php
 	include '../php/util.php';
-	$curLang = "en";
-	if(isSet($_GET["locale"]))
-		$curLang = "jp";
-	
-	if(strcmp($curLang, "jp") === 0)
-		changeLanguage();
-		
 	printPageDec(__FILE__);
 ?>
 
@@ -17,9 +10,9 @@
 	//Check to see if this page is being searched for a string.
 	//If so, call the js highlighting function after page loads.
 	if(isset($_GET['searchstr']))
-		echo '<body onload="selectSearchWords(\'' . $_GET['searchstr'] . '\')">';
+		println('<body onload="selectSearchWords(\'' . $_GET['searchstr'] . '\')">');
 	else
-		echo '<body>';
+		println('<body>');
 ?>
 	<div id="overlay"></div>
 <!-- header starts here -->
@@ -56,10 +49,10 @@
         <h1>Java Application <span class="white">Projects</span></h1>
         <p>
         <?php
-		echo _('This page contains links downloads for Desktop Applications I have created in the Java programming language. ');
-		echo _('To run them you will first need to download the corresponding .jar file, and you will need the <a href="https://java.com/getjava">JRE</a> installed. ');
-		echo _('If your system is configured correcty you will only need to double click the .jar file to make the application run. Otherwise you may open a command prompt ');
-		echo _('and run the application using the following method from the command line: $java -jar filename.jar');
+		println(_('This page contains links downloads for Desktop Applications I have created in the Java programming language. '));
+		println(_('To run them you will first need to download the corresponding .jar file, and you will need the <a href="https://java.com/getjava">JRE</a> installed. '));
+		println(_('If your system is configured correcty you will only need to double click the .jar file to make the application run. Otherwise you may open a command prompt '));
+		println(_('and run the application using the following method from the command line: $java -jar filename.jar'));
 	?>
         </p>
         <p class="post-footer align-right"><span class="date"><?php lastUpdated(__FILE__); ?></span></p>

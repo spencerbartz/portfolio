@@ -1,12 +1,5 @@
 <?php
 	include '../../php/util.php';
-	$curLang = "en";
-	if(isSet($_GET["locale"]))
-		$curLang = "jp";
-	
-	if(strcmp($curLang, "jp") === 0)
-		changeLanguage();
-		
 	printPageDec(__FILE__);
 ?>
 

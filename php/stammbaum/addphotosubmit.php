@@ -1,13 +1,6 @@
 <?php
 	include '../util.php';
-	include 'sbutil.php';
-	$curLang = "en";
-	if(isSet($_GET["locale"]))
-		$curLang = "jp";
-	
-	if(strcmp($curLang, "jp") === 0)
-		changeLanguage();
-		
+	include 'sbutil.php';		
 	printPageDec(__FILE__);
 ?>
 
