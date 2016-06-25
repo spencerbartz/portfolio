@@ -1,5 +1,4 @@
 <?php
-
 	include 'dbconnect.php';
 	include 'sbutil.php';
 	
@@ -21,10 +20,10 @@
 		echo "ERROR could not " . $family . " from familynames" . "<br/>\n";
 		
 	echo "Removing uploads/" . $family . "/_thumbnails" . "<br/>\n";
-	if(!deleteDirectory("uploads/" . $family . "/thumbnails"))
+	if(!delete_directory("uploads/" . $family . "/thumbnails"))
 		echo "ERROR could not delete uploads/" . $family . "/_thumbnails" . "<br/>\n";
 	
 	echo "Removing uploads/" . $family . "<br/>\n";
-	if(!deleteDirectory("uploads/" . $family))
+	if(!delete_directory("uploads/" . $family))
 		echo "ERROR could not delete uploads/" . $family . "<br/>\n";
 ?>

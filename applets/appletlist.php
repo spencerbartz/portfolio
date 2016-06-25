@@ -1,6 +1,6 @@
 <?php
 	include '../php/util.php';
-	printPageDec(__FILE__);
+	print_page_dec(__FILE__);
 ?>
 
 <title><?php echo _("Spencer Bartz - Portfolio Website"); ?></title>
@@ -18,16 +18,14 @@
 <div id="header">
   <div id="header-content">
   <?php
-  	printHeader(__FILE__);
+  	print_header(__FILE__);
   ?>
   </div>
 </div>
 <!-- navigation starts here -->
 <div id="nav-wrap">
   <div id="nav">
-<?php
-	printNav(__FILE__);
-?>
+<?php print_nav(__FILE__); ?>
   </div>
 </div>
 <!-- content-wrap starts here -->
@@ -37,7 +35,7 @@
     <!-- Right side search box area -->
     <div id="sidebar" >
       <div class="sidebox" id="searchbox">
-	<?php printSearchBox(__FILE__) ?>
+	<?php print_search_box(__FILE__) ?>
       </div>
       <div class="sep"></div>
     </div>
@@ -45,22 +43,21 @@
     <!-- Left Side (Main Content)-->
     <div id="main">
       <div class="box">
-        <h1>Java Applet <span class="white">Projects</span></h1>
+        <h1><?php println(_("Java Applet")); ?> <span class="white"><?php println(_("Projects")); ?></span></h1>
         <p>
         <?php
-		echo _('This page contains links to Applets I have created in the Java programming language.');
-		echo _('They can be run within your web browser, however you will need to install the <a href="https://java.com/getjava">JRE</a> to run them.');
-		echo _('Be sure to check your security settings so that you are able to run each Applet correctly.');
+			$desc = _('This page contains links to Applets I have created in the Java programming language. ' .
+			'They can be run within your web browser, however you will need to install the <a href="https://java.com/getjava">JRE</a> to run them. ' . 
+			'Be sure to check your security settings so that you are able to run each Applet correctly.');
         ?>
         </p>
-        <p class="post-footer align-right"><span class="date"><?php lastUpdated(__FILE__); ?></span> </p>
+        <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>
       </div>
-      
       
       <div class="box">
         <h1>Latest <span class="white">Projects</span></h1>
         <?php
-        	printProjectLinks();
+        	print_project_links();
         ?>
         
       </div>
@@ -74,7 +71,7 @@
 <div id="footer-wrap">
   <div id="footer-columns">
   <?php
-  	printFooter(__FILE__);
+  	print_footer(__FILE__);
   ?>
   </div>
   <!-- footer ends-->

@@ -8,7 +8,7 @@
 	
 	function set_language()
 	{
-		$locale = isSet($_GET["locale"]) ? $_GET["locale"] : $default_locale;
+		$locale = isSet($_GET["locale"]) ? $_GET["locale"] : $GLOBALS["default_locale"];
 		$locale = $locale . ".UTF-8";
 		
 		putenv("LC_ALL=$locale");
@@ -29,16 +29,15 @@
 		$path = "";
 		for($i = count($parts) - 2; $i > 0; $i--)
 		{
-			if($parts[$i] === $dev_root|| $parts[$i] === $prod_root)
+			if(!strcmp($parts[$i], $GLOBALS["dev_root"]) || !strcmp($parts[$i], $GLOBALS["prod_root"]))
 				break;
 			else 
 				$path = "../" . $path;
 		}
-		
 		return $path;
 	}
 
-	function printHeader($file)
+	function print_header($file)
 	{
 		$path = get_relative_root_path($file);
 	
@@ -49,7 +48,7 @@
 		println('</div>');
 	}
 
-	function printPageDec($file)
+	function print_page_dec($file)
 	{
 		println('<!doctype html>');
 		println('<html xmlns="http://www.w3.org/1999/xhtml">');
@@ -69,7 +68,7 @@
 
 	//Print the navigation bar at the top of the page with links to all project categories
 	//depending on the location of $file - The file that invoked this function
-	function printNav($file)
+	function print_nav($file)
 	{	
 		//hold all the file names for which we will create links in an array
 		$fileNames = array( "index.php", "php/phplist.php", "applets/appletlist.php", "applications/applicationlist.php", "js/jsindex.php", "python/pyindex.php");
@@ -109,10 +108,10 @@
 	}
 
 	//Print a form allowing the user to search pages
-	function printSearchBox($file)
+	function print_search_box($file)
 	{
 		$path = get_relative_root_path($file);
-		println('<div id="close-button" onclick="deactivateSearch();">Close [X]</div>');
+		println('<div id="close-button" onclick="deactivateSearch();">' . _("Close") . ' [X]</div>');
 		println("<h3>" . _("Search spencerbartz.com") . "</h3>");
 		println('<form id="searchform" action="' . $path . 'search/searchresult.php" class="searchform" method="post">');
 		println("<p>");
@@ -141,12 +140,12 @@
 	}
 
 	/********************* STRING HELPER FUNCTIONS *********************/
-	function startsWith($haystack, $needle)
+	function starts_with($haystack, $needle)
 	{
 		return $needle === "" || strpos($haystack, $needle) === 0;
 	}
 
-	function endsWith($haystack, $needle)
+	function ends_with($haystack, $needle)
 	{
 		return $needle === "" || substr($haystack, -strlen($needle)) === $needle;
 	}
@@ -160,7 +159,7 @@
 	}
 
 	//Print out a table with links and information about each project
-	function printProjectLinks()
+	function print_project_links()
 	{
 		$dir = ".";
 		if (is_dir($dir)) 
@@ -183,7 +182,7 @@
 					{
 						$lastUpdated = "12/29/2014";
 						
-						if(is_dir($file) && !in_array($file, $ignoreDirs) && !endsWith($file, "_bak"))
+						if(is_dir($file) && !in_array($file, $ignoreDirs) && !ends_with($file, "_bak"))
 						{
 							$lastUpdated = date ("m/d/Y", filemtime($file . "/index.php"));
 							$desc = fopen($file . "/desc.txt", "r");
@@ -223,7 +222,7 @@
 		}
 	}
 
-	function printNews()
+	function print_news()
 	{
 		include "news/dbconnect.php";
 	
@@ -248,7 +247,7 @@
 		}	
 	}
 
-	function printFooter($file)
+	function print_footer($file)
 	{
 		println('<div class="col3">');
 		println('<h2>' . _("Programming Languages") . '</h2>');
@@ -296,13 +295,13 @@
 		println('</p>');
 	}
 
-	function lastUpdated($filename)
+	function last_updated($filename)
 	{
 		if (file_exists($filename)) 
 			println( _("Last updated: ") . date ("F d, Y H:i:s", filemtime($filename)) . " PST");
 	}
 
-	function createThumbnail($imgFile, $tnPath, $thumbWidth = 100)
+	function create_thumbnail($imgFile, $tnPath, $thumbWidth = 100)
 	{
 		$info = pathinfo($imgFile);
 		
@@ -365,73 +364,12 @@
 		}
 	}
 
-	//Taken from http://webcheatsheet.com/php/create_thumbnail_images.php
-	function createThumbs( $pathToImages, $pathToThumbs, $thumbWidth )
-	{
-		// open the directory
-		$dir = opendir( $pathToImages );
-		
-		// loop through it, looking for any/all JPG files:
-		while (false !== ($fname = readdir( $dir )))
-		{
-			// parse path for the extension
-			$info = pathinfo($pathToImages . $fname);
-			// continue only if this is a JPEG image
-			if(strtolower($info['extension']) == 'jpg')
-			{
-				println("Creating thumbnail for {$fname} <br />");
-	
-				// load image and get image size
-				$img = imagecreatefromjpeg( "{$pathToImages}{$fname}" );
-				$width = imagesx( $img );
-				$height = imagesy( $img );
-	
-				// calculate thumbnail size
-				$new_width = $thumbWidth;
-				$new_height = floor( $height * ( $thumbWidth / $width ) );
-				
-				// create a new temporary image
-				$tmp_img = imagecreatetruecolor( $new_width, $new_height );
-				
-				// copy and resize old image into new image
-				imagecopyresized( $tmp_img, $img, 0, 0, 0, 0, $new_width, $new_height, $width, $height );
-	
-				// save thumbnail into a file
-				imagejpeg( $tmp_img, "{$pathToThumbs}{$fname}" );
-			}
-		}
-	
-		// close the directory
-		closedir( $dir );
-	}
-
 	function alert($str)
 	{
 		echo '<script type="text/javascript">alert("' . $str . '");</script>';
 	}
 
-	//Stackoverflow.com functions	
-	function searchSQLTable($str, $sql)
-	{
-		$sql="SELECT * from client_wireless";
-		$sql_query=mysql_query($sql);
-		$logicStr="WHERE ";
-		$count=mysql_num_fields($sql_query);
-		for($i=0 ; $i < mysql_num_fields($sql_query) ; $i++)
-		{
-			if($i == ($count-1))
-				$logicStr=$logicStr."".mysql_field_name($sql_query,$i)." LIKE '%".$string."%' ";
-			else
-				$logicStr=$logicStr."".mysql_field_name($sql_query,$i)." LIKE '%".$string."%' OR ";
-		}
-		
-		// start the search in all the fields and when a match is found, go on printing it .
-		$sql="SELECT * from client_wireless ".$logicStr;
-		//echo $sql;
-		$query=mysql_query($sql);
-	}
-
-	function deleteDirectory($dir)
+	function delete_directory($dir)
 	{
 		if (!file_exists($dir))
 			return true;
@@ -444,14 +382,15 @@
 			if ($item == '.' || $item == '..')
 				continue;
 	
-			if (!deleteDirectory($dir . DIRECTORY_SEPARATOR . $item))
+			if (!delete_directory($dir . DIRECTORY_SEPARATOR . $item))
 				return false;
 		}
 	
 		return rmdir($dir);
 	}
 	
-	function generateBotCheck()
+	// Instead of a captcha, let them do arithmetic!
+	function generate_bot_check()
 	{
 		$operands  = array(rand(1, 10), rand(1, 8), rand(1, 10));
 		$challenge = $operands[0] . " * " . $operands[1] . " - " . $operands[2] . " = ";

@@ -1,7 +1,7 @@
 <?php
 	include '../php/util.php';
 	include 'newsutil.php';
-	printPageDec(__FILE__);
+	print_page_dec(__FILE__);
 ?>
 
 <title><?php echo _("Spencer Bartz - Portfolio Website"); ?></title>
@@ -21,14 +21,14 @@
 	<!-- header starts here -->
 	<div id="header">
 		<div id="header-content">
-		<?php printHeader(__FILE__); ?>
+		<?php print_header(__FILE__); ?>
 		</div>
 	</div>
 	
 <!-- navigation starts here -->
 <div id="nav-wrap">
 	<div id="nav">
-		<?php printNav(__FILE__); ?>
+		<?php print_nav(__FILE__); ?>
 	</div>
 </div>
 
@@ -71,7 +71,7 @@
 </div>
 
 <div id="footer-wrap">
-	<div id="footer-columns"><?php printFooter(__FILE__); ?></div>
+	<div id="footer-columns"><?php print_footer(__FILE__); ?></div>
 </div>
 
 </body>

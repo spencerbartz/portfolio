@@ -1,6 +1,6 @@
 <?php
 	include 'php/util.php';
-	printPageDec(__FILE__);
+	print_page_dec(__FILE__);
 ?>
 
 <title><?php echo _("Spencer Bartz - Portfolio Website"); ?></title>
@@ -20,7 +20,7 @@
 	<div id="header">
 		<div id="header-content">
 		<?php
-			printHeader(__FILE__);
+			print_header(__FILE__);
 		?>
 		 </div>
 	</div>
@@ -29,7 +29,7 @@
 <div id="nav-wrap">
   <div id="nav">
 <?php
-	printNav(__FILE__);
+	print_nav(__FILE__);
 ?>
   </div>
 </div>
@@ -40,7 +40,7 @@
     <!-- Right side search box area -->
     <div id="sidebar" >
       <div class="sidebox" id="searchbox">
-	<?php printSearchBox(__FILE__) ?>
+	<?php print_search_box(__FILE__) ?>
       </div>
       <div class="sep"></div>
     </div>
@@ -49,25 +49,25 @@
     <div id="main">
 	
       <div class="box">
-        <h1><?php echo _('Welcome to <span class="white">spencerbartz.com</span>'); ?></h1>
+        <h1><?php println(_('Welcome to <span class="white">spencerbartz.com</span>')); ?></h1>
         <p>
         <?php 
-        	echo _("This site is a compilation of some of my programming projects in PHP, SQL, Java, Javascript, and more to come. "); 
-        	echo _("Web based projects can be run without installing additional software. Java however requires installation of ");
-        	echo _("a separate runtime environment. Links to those downloads can be found at the bottom of the page. ");
-		echo _("The site itself is written in PHP with a MySQL database for the back end, and Javascript/AJAX, CSS3, and a peppering of JQuery ");
-		echo _("for the front end. (While I do like to write my JS from scratch, browser compatibility eventually becomes quite a time burglar). ");
-		echo _('The original CSS template was taken from <a href="http://www.styleshout.com">www.styleshout.com</a> and has been altered to ');
-		echo _("meet the aesthetic and functional requirements of this website.");
-		echo _("<br/>");
-		echo _('<strong>NOTE: The site is a work in progress. If something doesn\'t work right, feel free to contact me.</strong>');
+        	$desc = _("This site is a compilation of some of my programming projects in PHP, SQL, Java, Javascript, and more to come. " .
+        	"Web based projects can be run without installing additional software. Java and Python however require installation of " .
+        	"a separate runtime environment. Links to those downloads can be found at the bottom of the page. " .
+			"The site itself is written using PHP, JavaScript, and MySQL. " .
+			"I changed the original CSS, taken from <a href=\"http://www.styleshout.com\">styleshout.com</a> , to " .
+			"meet the aesthetic and functional requirements of this website. <br/>" .
+		   "<strong>This site is a work in progress. If something doesn't work right, feel free to report a bug!</strong>");
+			
+			println($desc);
         ?>
         </p>
-        <p class="post-footer align-right"><span class="date"><?php lastUpdated(__FILE__); ?></span> </p>
+        <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>
       </div>
 
 	<?php
-		printNews();	
+		print_news();	
 	?>
       
     </div>
@@ -79,7 +79,7 @@
 <div id="footer-wrap">
   <div id="footer-columns">
   	<?php
-  		printFooter(__FILE__);
+  		print_footer(__FILE__);
   	?>
 
   </div>

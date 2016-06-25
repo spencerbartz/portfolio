@@ -107,8 +107,8 @@ $familyname =  $_GET["dbname"] . '/';
  $return['src'] = strtolower('../uploads/' . $familyname . $_FILES['Filedata']['name']);
  
  include '../../util.php';
- createThumbnail(strtolower('../uploads/' . $familyname . $_FILES['Filedata']['name']), strtolower('../uploads/' . $familyname . 'thumbnails/'), 75);
- //$return['link'] = YourImageLibrary::createThumbnail($_FILES['Filedata']['tmp_name']);
+ create_thumbnail(strtolower('../uploads/' . $familyname . $_FILES['Filedata']['name']), strtolower('../uploads/' . $familyname . 'thumbnails/'), 75);
+ //$return['link'] = YourImageLibrary::create_thumbnail($_FILES['Filedata']['tmp_name']);
 
 
 if ($error) {

@@ -1,6 +1,6 @@
 <?php
 	include '../php/util.php';
-	printPageDec(__FILE__);
+	print_page_dec(__FILE__);
 ?>
 
 <title><?php echo _("Spencer Bartz - Portfolio Website"); ?></title>
@@ -13,14 +13,14 @@
 	else
 		echo '<body>';
 		
-	$botCheck = generateBotCheck();
+	$botCheck = generate_bot_check();
 ?>
 	<div id="overlay"></div>
 <!-- header starts here -->
 <div id="header">
   <div id="header-content">
   <?php
-  	printHeader(__FILE__);
+  	print_header(__FILE__);
   ?>
   </div>
 </div>
@@ -28,7 +28,7 @@
 <div id="nav-wrap">
   <div id="nav">
 <?php
-	printNav(__FILE__);
+	print_nav(__FILE__);
 ?>
   </div>
 </div>
@@ -39,7 +39,7 @@
     <!-- Right side search box area -->
     <div id="sidebar" >
       <div class="sidebox" id="searchbox">
-	<?php printSearchBox(__FILE__) ?>
+	<?php print_search_box(__FILE__) ?>
       </div>
       <div class="sep"></div>
     </div>
@@ -69,15 +69,15 @@
         <div id="erremail"><?php echo _("Email: "); ?></div><input name="email" class="textbox" type="text" /><br/><br/>
         <div id="errsubject"><?php echo _("Subject: "); ?></div><input name="subject" class="textbox" type="text" /><br/><br/>
         <div id="errmessage"><?php echo _("Message: "); ?></div><textarea name="message" rows="50" cols="100"></textarea><br/>
-	<div id="erruserresult"><?php echo _("Prove you're a human: "); ?></div><?php echo $botCheck[0]; ?><input name="userresult" class="textbox" type="text" /><br/><br/>
+		<div id="erruserresult"><?php echo _("Prove you're a human: "); ?></div><?php echo $botCheck[0]; ?><input name="userresult" class="textbox" type="text" /><br/><br/>
         <input name="result" type="hidden" value="<?php echo $botCheck[1]; ?>">
-	<input name="txtmsg" value="txtmsg" type="checkbox" /> <?php echo _('Send me a text message'); ?><br/><br/>
+		<input name="txtmsg" value="txtmsg" type="checkbox" /> <?php echo _('Send me a text message'); ?><br/><br/>
         <input name="submit" class="button" value="<?php echo _('Submit'); ?>" type="submit" /><br/>
         
         </form>
   
         </p>
-        <p class="post-footer align-right"><span class="date"><?php lastUpdated(__FILE__); ?></span> </p>
+        <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>
       </div>
     </div>
 
@@ -88,7 +88,7 @@
 <div id="footer-wrap">
   <div id="footer-columns">
   	<?php
-  		printFooter(__FILE__);
+  		print_footer(__FILE__);
   	?>
   </div>
   <!-- footer ends-->

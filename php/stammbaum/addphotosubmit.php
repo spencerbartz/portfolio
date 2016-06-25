@@ -1,7 +1,7 @@
 <?php
 	include '../util.php';
 	include 'sbutil.php';		
-	printPageDec(__FILE__);
+	print_page_dec(__FILE__);
 ?>
 
 <title><?php echo _("Spencer Bartz - Portfolio Website"); ?></title>
@@ -12,7 +12,7 @@
 <div id="header">
   <div id="header-content">
   <?php
-  	printHeader(__FILE__);
+  	print_header(__FILE__);
   ?>
   </div>
 </div>
@@ -20,7 +20,7 @@
 <div id="nav-wrap">
   <div id="nav">
 <?php
-	printNav(__FILE__);
+	print_nav(__FILE__);
 ?>
   </div>
 </div>
@@ -45,17 +45,17 @@
        <div style="float:left"><h1><?php echo _('{' . $curDB . '} Family Photo <span class="white">upload complete</span>'); ?></h1></div>
  
   	<?php
-        	if($curDB !== "none")
-        	{
-        	        echo '<div class="dropdown" style="float:right">';
+		if($curDB !== "none")
+		{
+			echo '<div class="dropdown" style="float:right">';
 			printMenu($_SERVER['PHP_SELF'], $curDB);
-        		echo '</div>';
-        	}
-        	else
-        	{
-        		echo _('<meta http-equiv="refresh" content="0; url=error.php?errmsg=' . urlencode("No Family Line Selected.") . '">');
-        		die();        	
-        	}
+			echo '</div>';
+		}
+		else
+		{
+			echo _('<meta http-equiv="refresh" content="0; url=error.php?errmsg=' . urlencode("No Family Line Selected.") . '">');
+			die();        	
+		}
   	
   		include 'dbconnect.php';
   		
@@ -68,68 +68,63 @@
   		$createdby = "";
   		
   		//Process required elements from form
-        	$reqKeys = array("filename", "day", "month", "year", "description", "createdby");
-        	
-        	for($i = 0; $i < count($reqKeys); $i++)
-        	{
-        		if(isset($_POST[$reqKeys[$i]]))
-        		{
-        			eval('$' . $reqKeys[$i] . ' = ' . ' $mysqli->real_escape_string($_POST["' . $reqKeys[$i] . '"]);');
+		$reqKeys = array("filename", "day", "month", "year", "description", "createdby");
+		
+		for($i = 0; $i < count($reqKeys); $i++)
+		{
+			if(isset($_POST[$reqKeys[$i]]))
+			{
+				eval('$' . $reqKeys[$i] . ' = ' . ' $mysqli->real_escape_string($_POST["' . $reqKeys[$i] . '"]);');
 			}
 			else
 			{
 				echo _('<meta http-equiv="refresh" content="0; url=error.php?errmsg=The required HTTP parameters were not found&redirect=addphoto.php?dbname=' . $curDB . '">');
 				die();
 			}
-        	}
+		}
         	
-        	//Process optional elements from form
-        	$optKeys = array("peopleshown");
+		//Process optional elements from form
+		$optKeys = array("peopleshown");
+		
+		for($i = 0; $i < count($optKeys); $i++)
+			if(isset($_POST[$optKeys[$i]]))
+				eval('$' . $optKeys[$i] . ' = ' . ' $mysqli->real_escape_string($_POST["' . $optKeys[$i] . '"]);');
+		
+		if(intval($day) % 10 != 0)
+			$day = "0" . $day;
+		
+		if(intval($month) % 10 != 0)
+			$month = "0" . $month;
+		
+		$dateTaken = $year . "-" . $month . "-" . $day;
+		
+		$filename = strtolower($filename);
+		
+		$sql = "SELECT * FROM " . $curDB . "_photos WHERE filename='" . $filename . "'";
+		
+		$res = $mysqli->query($sql);
         	
-        	for($i = 0; $i < count($optKeys); $i++)
-        	{
-         		if(isset($_POST[$optKeys[$i]]))
-        		{
-        			eval('$' . $optKeys[$i] . ' = ' . ' $mysqli->real_escape_string($_POST["' . $optKeys[$i] . '"]);');
-        		}
-        	}
-        	
-        	if(intval($day) % 10 != 0)
-        		$day = "0" . $day;
-        	
-        	if(intval($month) % 10 != 0)
-        		$month = "0" . $month;
-        	
-        	$dateTaken = $year . "-" . $month . "-" . $day;
-        	
-        	$filename = strtolower($filename);
-        	
-        	$sql = "SELECT * FROM " . $curDB . "_photos WHERE filename='" . $filename . "'";
-        	
-        	$res = $mysqli->query($sql);
-        	
-        	if($row = $res->fetch_assoc())
-        	{
-        
+		if($row = $res->fetch_assoc())
+		{
 			echo _('<meta http-equiv="refresh" content="0; url=error.php?errmsg=That photo has already been uploaded to Stammbaum&redirect=addphoto.php?dbname=' . $curDB . '">');
-        	}
-        	else
-        	{
-        		$sql = "INSERT INTO " . $curDB . "_photos VALUES(NULL, '" . $filename . "', DATE('" . $dateTaken . "'), '" . $description . "', '" . $peopleshown . "', NOW(), '" . $createdby . "')";
-        	
-        		if(!$mysqli->query($sql)) 
-        		{
-			    echo "Insertion Failed: (" . $mysqli->errno . ") " . $mysqli->error;
+		}
+		else
+		{
+			$sql = "INSERT INTO " . $curDB . "_photos VALUES(NULL, '" . $filename . "', DATE('" . $dateTaken . "'), '" . $description . "', '" . $peopleshown . "', NOW(), '" . $createdby . "')";
+		
+			if(!$mysqli->query($sql)) 
+			{
+				echo "Insertion Failed: (" . $mysqli->errno . ") " . $mysqli->error;
 			}
 			else
 			{
 				echo "<div class=\"blurb\">Succesfully uploaded " . basename($filename) . " on " . date ("F d, Y H:i:s") . " PST<br/>";
 				echo '<div style="text-align:center"><img src="' . $filename . '" /></div></div>'; 
 			}
-  		}
-  	?>
+		}
+	?>
         
-        <p class="post-footer align-right"><span class="date"><?php lastUpdated(__FILE__); ?></span></p>
+        <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span></p>
       </div>
     </div>
 
@@ -140,7 +135,7 @@
 <div id="footer-wrap">
   <div id="footer-columns">
   	<?php
-  		printFooter(__FILE__);
+  		print_footer(__FILE__);
   	?>
   </div>
   <!-- footer ends-->

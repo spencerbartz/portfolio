@@ -1,6 +1,6 @@
 <?php
 	include '../php/util.php';
-	printPageDec(__FILE__);
+	print_page_dec(__FILE__);
 ?>
 
 <title><?php echo _("Spencer Bartz - Portfolio Website"); ?></title>
@@ -10,17 +10,13 @@
 <!-- header starts here -->
 <div id="header">
   <div id="header-content">
-  <?php
-  	printHeader(__FILE__);
-  ?>
+	<?php print_header(__FILE__); ?>
   </div>
 </div>
 <!-- navigation starts here -->
 <div id="nav-wrap">
   <div id="nav">
-<?php
-	printNav(__FILE__);
-?>
+	<?php print_nav(__FILE__); ?>
   </div>
 </div>
 <!-- content-wrap starts here -->
@@ -31,7 +27,7 @@
     <!-- Right side search box area -->
     <div id="sidebar" >
       <div class="sidebox" id="searchbox">
-	<?php printSearchBox(__FILE__) ?>
+	<?php print_search_box(__FILE__) ?>
       </div>
       <div class="sep"></div>
     </div>
@@ -102,7 +98,7 @@
 <div id="footer-wrap">
   <div id="footer-columns">
   	<?php
-  		printFooter(__FILE__);
+  		print_footer(__FILE__);
   	?>
 
   </div>

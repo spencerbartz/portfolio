@@ -1,6 +1,6 @@
 <?php
 	include '../php/util.php';
-	printPageDec(__FILE__);
+	print_page_dec(__FILE__);
 ?>
 
 <title><?php echo _("Spencer Bartz - Portfolio Website"); ?></title>
@@ -18,7 +18,7 @@
 <div id="header">
   <div id="header-content">
   <?php
-  	printHeader(__FILE__);
+  	print_header(__FILE__);
   ?>
   </div>
 </div>
@@ -26,7 +26,7 @@
 <div id="nav-wrap">
   <div id="nav">
 <?php
-	printNav(__FILE__);
+	print_nav(__FILE__);
 ?>
   </div>
 </div>
@@ -37,7 +37,7 @@
     <!-- Right side search box area -->
     <div id="sidebar" >
       <div class="sidebox" id="searchbox">
-	<?php printSearchBox(__FILE__) ?>
+	<?php print_search_box(__FILE__) ?>
       </div>
       <div class="sep"></div>
     </div>
@@ -54,13 +54,13 @@
 		echo _('focusing on design, front end functionality, and aesthetics.');
         ?>
         </p>
-        <p class="post-footer align-right"><span class="date"><?php lastUpdated(__FILE__); ?></span> </p>
+        <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>
       </div>
       
       <div class="box">
         <h1><?php echo _('Latest <span class="white">Projects</span>'); ?></h1>
         <?php 
-        	printProjectLinks(); 
+        	print_project_links(); 
         ?>
       </div>
       <br/>
@@ -73,7 +73,7 @@
 <div id="footer-wrap">
   <div id="footer-columns">
   	<?php
-  		printFooter(__FILE__);
+  		print_footer(__FILE__);
   	?>
   </div>
   <!-- footer ends-->

@@ -1,19 +1,18 @@
 <?php
 	include '../util.php';
 	include 'sbutil.php';
-	printPageDec(__FILE__);
+	print_page_dec(__FILE__);
 ?>
 
 <title><?php echo _("Spencer Bartz - Portfolio Website"); ?></title>
 <?php sbIncludes(); ?>
-
 </head>
 <body>
 <!-- header starts here -->
 <div id="header">
   <div id="header-content">
   <?php
-  	printHeader(__FILE__);
+  	print_header(__FILE__);
   ?>
   </div>
 </div>
@@ -21,7 +20,7 @@
 <div id="nav-wrap">
   <div id="nav">
 <?php
-	printNav(__FILE__);
+	print_nav(__FILE__);
 ?>
   </div>
 </div>
@@ -129,7 +128,7 @@
         				{
         					while(($file2 = readdir($dh2)) !== false)
         					{
-        						if(!is_dir($file2) && endsWith($file2, ".jpg"))
+        						if(!is_dir($file2) && ends_with($file2, ".jpg"))
         						{
         							echo '<a href="' . $uploadDir . "/" . $file . "/" . $file2 . '" target="new">' . $file2 . '</a><br/>';
         						}
@@ -146,7 +145,7 @@
         
         </div>
         
-        <p class="post-footer align-right"><span class="date"><?php lastUpdated(__FILE__); ?></span></p>
+        <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span></p>
       </div>
     </div>
 
@@ -157,7 +156,7 @@
 <div id="footer-wrap">
   <div id="footer-columns">
   	<?php
-  		printFooter(__FILE__);
+  		print_footer(__FILE__);
   	?>
   </div>
   <!-- footer ends-->

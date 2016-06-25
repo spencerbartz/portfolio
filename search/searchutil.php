@@ -145,7 +145,7 @@
 			$fullUrl .= $GLOBALS['host'];
 		
 		if(isset($urlParts['path']))
-			$fullUrl .= startsWith($urlParts['path'], "/") ? $urlParts['path'] : "/" . $urlParts['path'];
+			$fullUrl .= starts_with($urlParts['path'], "/") ? $urlParts['path'] : "/" . $urlParts['path'];
 		
 		if(isset($urlParts['query']))
 			$fullUrl .= "?" . $urlParts['query'];
@@ -195,7 +195,7 @@
 						continue;
 
 					//Check that we are only following links we want
-					if(!(endsWith($hrefParts['path'], ".php") || endsWith($hrefParts['path'], ".html")))
+					if(!(ends_with($hrefParts['path'], ".php") || ends_with($hrefParts['path'], ".html")))
 						continue;
 						
 					//Relative internal Link with no host specified (this should even handle links with ../ in them!)

@@ -1,7 +1,7 @@
 <?php
 	include '../util.php';
 	include 'sbutil.php';
-	printPageDec(__FILE__);
+	print_page_dec(__FILE__);
 ?>
 
 <title><?php echo _("Spencer Bartz - Portfolio Website"); ?></title>
@@ -27,7 +27,7 @@
 <div id="header">
   <div id="header-content">
   <?php
-  	printHeader(__FILE__);
+  	print_header(__FILE__);
   ?>
   </div>
 </div>
@@ -35,7 +35,7 @@
 <div id="nav-wrap">
   <div id="nav">
 <?php
-	printNav(__FILE__);
+	print_nav(__FILE__);
 ?>
   </div>
 </div>
@@ -103,8 +103,6 @@
 			</form>		
 		</div>
 		
-
-	
    	<form action="addphotosubmit.php?dbname=<?php echo getCurDB(); ?>" id="addnewform" onsubmit="return checkFormFields('addnewform', 'errormsg', ['peopleshown'])" style="display:inline-block;" method="post">   	
    	<input name="filename" id="filename" type="hidden" value="" />
    	<div id="errdate" style="display:inline-block">
@@ -151,16 +149,11 @@
         <input name="submit" class="button" value="<?php echo _('Submit'); ?>" type="submit" /><br/>
         </div>
         </form>
-        
                	<div id="thumbnail" style="display:none;float:right" class="tn"></div>
         </div>
-        
         <div id="errormsg"></div>
-	<div id="curdb" style="display:none"><?php echo $curDB; ?></div>
-			
-
-        
-        <p class="post-footer align-right"><span class="date"><?php lastUpdated(__FILE__); ?></span></p>
+		<div id="curdb" style="display:none"><?php echo $curDB; ?></div>		
+        <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span></p>
       </div>
     </div>
 
@@ -171,7 +164,7 @@
 <div id="footer-wrap">
   <div id="footer-columns">
   	<?php
-  		printFooter(__FILE__);
+  		print_footer(__FILE__);
   	?>
   </div>
   <!-- footer ends-->

@@ -1,6 +1,6 @@
 <?php
 	include '../php/util.php';
-	printPageDec(__FILE__);
+	print_page_dec(__FILE__);
 ?>
 
 <title><?php echo _("Spencer Bartz - Portfolio Website"); ?></title>
@@ -18,7 +18,7 @@
 <div id="header">
   <div id="header-content">
   <?php
-  	printHeader(__FILE__);
+  	print_header(__FILE__);
   ?>
   </div>
 </div>
@@ -26,7 +26,7 @@
 <div id="nav-wrap">
   <div id="nav">
 <?php
-	printNav(__FILE__);
+	print_nav(__FILE__);
 ?>
   </div>
 </div>
@@ -37,7 +37,7 @@
     <!-- Right side search box area -->
     <div id="sidebar" >
       <div class="sidebox" id="searchbox">
-	<?php printSearchBox(__FILE__) ?>
+	<?php print_search_box(__FILE__) ?>
       </div>
       <div class="sep"></div>
     </div>
@@ -45,26 +45,25 @@
     <!-- Left Side (Main Content)-->
     <div id="main">
       <div class="box">
-        <h1><?php echo _('Python <span class="white">Projects</span>'); ?></h1>
+        <h1><?php println(_("Python")); ?><span class="white"><?php println(_("Projects")); ?></span></h1>
         <p>
         <?php
-                $desc = 'This page contains links to some projects I have created in Python. ' .
+                $desc = _('This page contains links to my Python projects. ' .
                 'I learned Python while working at Novacoast in 2007 and came to respect the ' .
-                'great power it can deliver in application programming. Although great web ' .
-                'frameworks like Django for python do exist, unfortunately installing them on my hosting ' .
-                'would require I upgrade to a dedicated server. So for now these projects will be ' .
-                'desktop / command line applications';
+                'great power it can deliver in application programming. ' .
+                'Until I can find hosting where I can set up Django these projects will be ' .
+                'desktop / command line applications');
 		
-                echo $desc
+                echo $desc;
         ?>
         </p>
-        <p class="post-footer align-right"><span class="date"><?php lastUpdated(__FILE__); ?></span> </p>
+        <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>
       </div>
       
       <div class="box">
-        <h1><?php echo _('Latest <span class="white">Projects</span>'); ?></h1>
+        <h1><?php echo _("Latest"); ?> <span class="white"><?php println(_("Projects")); ?></span></h1>
         <?php 
-        	printProjectLinks(); 
+        	print_project_links(); 
         ?>
       </div>
       <br/>
@@ -77,7 +76,7 @@
 <div id="footer-wrap">
   <div id="footer-columns">
   	<?php
-  		printFooter(__FILE__);
+  		print_footer(__FILE__);
   	?>
   </div>
   <!-- footer ends-->

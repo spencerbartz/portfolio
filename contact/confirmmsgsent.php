@@ -1,6 +1,6 @@
 <?php
 	include '../php/util.php';
-	printPageDec(__FILE__);
+	print_page_dec(__FILE__);
 ?>
 
 <title><?php echo _("Spencer Bartz - Portfolio Website"); ?></title>
@@ -10,7 +10,7 @@
 <div id="header">
   <div id="header-content">
   <?php
-  	printHeader(__FILE__);
+  	print_header(__FILE__);
   ?>
   </div>
 </div>
@@ -18,7 +18,7 @@
 <div id="nav-wrap">
   <div id="nav">
 <?php
-	printNav(__FILE__);
+	print_nav(__FILE__);
 ?>
   </div>
 </div>
@@ -29,7 +29,7 @@
       <!-- Right side search box area -->
     <div id="sidebar" >
       <div class="sidebox" id="searchbox">
-	<?php printSearchBox(__FILE__) ?>
+	<?php print_search_box(__FILE__) ?>
       </div>
       <div class="sep"></div>
     </div>
@@ -59,13 +59,13 @@ function check_input($data)
         		if(isset($_POST[ $keys[$i] ] ))
         		{
         			eval('$' . $keys[$i] . ' = ' . 'check_input($_POST["' . $keys[$i] . '"]);');
-			}
-			else
-			{
-				echo _('ERROR: No input provided');
-				echo _('<meta HTTP-EQUIV="refresh" content="0; url=http://www.spencerbartz.com/contact/contactresume.php">');
-				die();
-			}
+				}
+				else
+				{
+					echo _('ERROR: No input provided');
+					echo _('<meta HTTP-EQUIV="refresh" content="0; url=http://www.spencerbartz.com/contact/contactresume.php">');
+					die();
+				}
         	}
 		
 		if($_POST["result"] !== $_POST["userresult"])
@@ -82,16 +82,10 @@ function check_input($data)
 		
 		//If the text message checkbox was checked, send the message to my phone as well.
 		if(isset($_POST["txtmsg"]))
-		{
 			$to .= ",8058862293@txt.att.net";
-		}
 		
 		if ($referer == "")
-		{
 			$referer = "NONE";
-		}
-		
-		
 		
 		$message = "EMAIL: " . $email . "\n" . "NAME: " . $name . "\n" . "IP: " . $ip . "\n" . "BROWSER: " . $browser . "\n" . "REFERER: " . $referer . "\n" . "MESSAGE BODY:\n" . $message;
 		
@@ -109,7 +103,7 @@ function check_input($data)
         </p>
         <p>
         </p>
-        <p class="post-footer align-right"><span class="date"><?php lastUpdated(__FILE__); ?></span></p>
+        <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span></p>
       </div>
     </div>
 
@@ -120,7 +114,7 @@ function check_input($data)
 <div id="footer-wrap">
   <div id="footer-columns">
   	<?php
-  		printFooter(__FILE__);
+  		print_footer(__FILE__);
   	?>
   </div>
   <!-- footer ends-->

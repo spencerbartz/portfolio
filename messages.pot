@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-24 18:52-0700\n"
+"POT-Creation-Date: 2016-06-24 20:50-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: applets/appletlist.php:6 applications/applicationlist.php:13
-#: contact/confirmmsgsent.php:13 contact/contactresume.php:13 index.php:6
-#: js/jsindex.php:13 news/newsadmin.php:7 php/phplist.php:13
-#: php/stammbaum/addmember.php:14 php/stammbaum/addmembersubmit.php:14
-#: php/stammbaum/addphoto.php:14 php/stammbaum/addphotosubmit.php:14
-#: php/stammbaum/deletephoto.php:14 php/stammbaum/editphoto.php:14
-#: php/stammbaum/editphotosubmit.php:14 php/stammbaum/error.php:14
-#: php/stammbaum/index.php:14 php/stammbaum/listall.php:14
-#: php/stammbaum/listmembers.php:14 php/stammbaum/listphotos.php:14
-#: php/stammbaum/newline.php:14 php/stammbaum/newlinesubmit.php:14
-#: php/stammbaum/search.php:14 php/stammbaum/searchsubmit.php:14
-#: python/copycat/index.php:13 python/pyindex.php:13 search/searchresult.php:13
+#: applets/appletlist.php:6 applications/applicationlist.php:6
+#: contact/confirmmsgsent.php:6 contact/contactresume.php:6 index.php:8
+#: js/jsindex.php:6 news/newsadmin.php:7 php/phplist.php:6
+#: php/stammbaum/addmember.php:7 php/stammbaum/addmembersubmit.php:7
+#: php/stammbaum/addphoto.php:7 php/stammbaum/addphotosubmit.php:7
+#: php/stammbaum/deletephoto.php:7 php/stammbaum/editphoto.php:7
+#: php/stammbaum/editphotosubmit.php:7 php/stammbaum/error.php:7
+#: php/stammbaum/index.php:7 php/stammbaum/listall.php:7
+#: php/stammbaum/listmembers.php:7 php/stammbaum/listphotos.php:7
+#: php/stammbaum/newline.php:7 php/stammbaum/newlinesubmit.php:7
+#: php/stammbaum/search.php:7 php/stammbaum/searchsubmit.php:7
+#: python/copycat/index.php:6 python/pyindex.php:6 search/searchresult.php:6
 msgid "Spencer Bartz - Portfolio Website"
 msgstr ""
 
@@ -50,217 +50,217 @@ msgid ""
 "Applet correctly."
 msgstr ""
 
-#: applications/applicationlist.php:59
+#: applications/applicationlist.php:52
 msgid ""
 "This page contains links downloads for Desktop Applications I have created "
 "in the Java programming language. "
 msgstr ""
 
-#: applications/applicationlist.php:60
+#: applications/applicationlist.php:53
 msgid ""
 "To run them you will first need to download the corresponding .jar file, and "
 "you will need the <a href=\"https://java.com/getjava\">JRE</a> installed. "
 msgstr ""
 
-#: applications/applicationlist.php:61
+#: applications/applicationlist.php:54
 msgid ""
 "If your system is configured correcty you will only need to double click "
 "the .jar file to make the application run. Otherwise you may open a command "
 "prompt "
 msgstr ""
 
-#: applications/applicationlist.php:62
+#: applications/applicationlist.php:55
 msgid ""
 "and run the application using the following method from the command line: "
 "$java -jar filename.jar"
 msgstr ""
 
-#: contact/confirmmsgsent.php:47 index.php:52
+#: contact/confirmmsgsent.php:40 index.php:54
 msgid "Welcome to <span class=\"white\">spencerbartz.com</span>"
 msgstr ""
 
-#: contact/confirmmsgsent.php:72
+#: contact/confirmmsgsent.php:65
 msgid "ERROR: No input provided"
 msgstr ""
 
-#: contact/confirmmsgsent.php:73
+#: contact/confirmmsgsent.php:66
 msgid ""
 "<meta HTTP-EQUIV=\"refresh\" content=\"0; url=http://www.spencerbartz.com/"
 "contact/contactresume.php\">"
 msgstr ""
 
-#: contact/confirmmsgsent.php:80
+#: contact/confirmmsgsent.php:73
 msgid "ERROR: Incorrect input"
 msgstr ""
 
-#: contact/confirmmsgsent.php:81 contact/confirmmsgsent.php:109
+#: contact/confirmmsgsent.php:74 contact/confirmmsgsent.php:102
 msgid ""
 "<meta HTTP-EQUIV=\"refresh\" content=\"2; url=http://www.spencerbartz.com/"
 "contact/contactresume.php\">"
 msgstr ""
 
-#: contact/confirmmsgsent.php:107
+#: contact/confirmmsgsent.php:100
 msgid "<strong>Message sent successfully!</strong><br/>"
 msgstr ""
 
-#: contact/confirmmsgsent.php:108
+#: contact/confirmmsgsent.php:101
 msgid "<strong>Redirecting...</strong><br/>"
 msgstr ""
 
-#: contact/confirmmsgsent.php:113
+#: contact/confirmmsgsent.php:106
 msgid "<strong>Failed to send message.</strong><br/>"
 msgstr ""
 
-#: contact/contactresume.php:57
+#: contact/contactresume.php:50
 msgid "Contact Information <span class=\"white\">and Résumé</span>"
 msgstr ""
 
-#: contact/contactresume.php:60
+#: contact/contactresume.php:53
 msgid "<strong>"
 msgstr ""
 
-#: contact/contactresume.php:61
+#: contact/contactresume.php:54
 msgid "Spencer P. Bartz<br/>"
 msgstr ""
 
-#: contact/contactresume.php:62
+#: contact/contactresume.php:55
 msgid "Phone: (805) 886-2293<br/>"
 msgstr ""
 
-#: contact/contactresume.php:63
+#: contact/contactresume.php:56
 msgid ""
 "Email: <a href=\"mailto:spencerbartz@gmail.com\">spencerbartz@gmail.com</"
 "a><br/>"
 msgstr ""
 
-#: contact/contactresume.php:64
+#: contact/contactresume.php:57
 msgid "Skype: <a href=\"skype:spencerpbartz?call\">spencerpbartz</a><br/>"
 msgstr ""
 
-#: contact/contactresume.php:65
+#: contact/contactresume.php:58
 msgid ""
 "Résumé: <a href=\"spencer_bartz_resume.doc\" download=\"spencer_bartz_resume."
 "doc\">Download in .doc format</a><br/>"
 msgstr ""
 
-#: contact/contactresume.php:66
+#: contact/contactresume.php:59
 msgid ""
 "View my repositories on <a href=\"https://github.com/spencerbartz?"
 "tab=repositories\">Git Hub</a>"
 msgstr ""
 
-#: contact/contactresume.php:67
+#: contact/contactresume.php:60
 msgid "</strong>"
 msgstr ""
 
-#: contact/contactresume.php:73
+#: contact/contactresume.php:66
 msgid "<strong>Send me a message: </strong>"
 msgstr ""
 
-#: contact/contactresume.php:75
+#: contact/contactresume.php:68
 msgid "Name: "
 msgstr ""
 
-#: contact/contactresume.php:76
+#: contact/contactresume.php:69
 msgid "Email: "
 msgstr ""
 
-#: contact/contactresume.php:77
+#: contact/contactresume.php:70
 msgid "Subject: "
 msgstr ""
 
-#: contact/contactresume.php:78
+#: contact/contactresume.php:71
 msgid "Message: "
 msgstr ""
 
-#: contact/contactresume.php:79
+#: contact/contactresume.php:72
 msgid "Prove you're a human: "
 msgstr ""
 
-#: contact/contactresume.php:81
+#: contact/contactresume.php:74
 msgid "Send me a text message"
 msgstr ""
 
-#: contact/contactresume.php:82 php/stammbaum/addmember.php:165
-#: php/stammbaum/addphoto.php:158 php/stammbaum/editphoto.php:158
-#: php/stammbaum/newline.php:68 php/stammbaum/search.php:68
+#: contact/contactresume.php:75 php/stammbaum/addmember.php:158
+#: php/stammbaum/addphoto.php:151 php/stammbaum/editphoto.php:151
+#: php/stammbaum/newline.php:61 php/stammbaum/search.php:61
 msgid "Submit"
 msgstr ""
 
-#: index.php:55
+#: index.php:57
 msgid ""
 "This site is a compilation of some of my programming projects in PHP, SQL, "
 "Java, Javascript, and more to come. "
 msgstr ""
 
-#: index.php:56
+#: index.php:58
 msgid ""
 "Web based projects can be run without installing additional software. Java "
 "however requires installation of "
 msgstr ""
 
-#: index.php:57
+#: index.php:59
 msgid ""
 "a separate runtime environment. Links to those downloads can be found at the "
 "bottom of the page. "
 msgstr ""
 
-#: index.php:58
+#: index.php:60
 msgid ""
 "The site itself is written in PHP with a MySQL database for the back end, "
 "and Javascript/AJAX, CSS3, and a peppering of JQuery "
 msgstr ""
 
-#: index.php:59
+#: index.php:61
 msgid ""
 "for the front end. (While I do like to write my JS from scratch, browser "
 "compatibility eventually becomes quite a time burglar). "
 msgstr ""
 
-#: index.php:60
+#: index.php:62
 msgid ""
 "The original CSS template was taken from <a href=\"http://www.styleshout.com"
 "\">www.styleshout.com</a> and has been altered to "
 msgstr ""
 
-#: index.php:61
+#: index.php:63
 msgid "meet the aesthetic and functional requirements of this website."
 msgstr ""
 
-#: index.php:62
+#: index.php:64
 msgid "<br/>"
 msgstr ""
 
-#: index.php:63
+#: index.php:65
 msgid ""
 "<strong>NOTE: The site is a work in progress. If something doesn't work "
 "right, feel free to contact me.</strong>"
 msgstr ""
 
-#: js/jsindex.php:55
+#: js/jsindex.php:48
 msgid "JavaScript <span class=\"white\">Projects</span>"
 msgstr ""
 
-#: js/jsindex.php:58
+#: js/jsindex.php:51
 msgid ""
 "This page contains links to some projects I have created in JavaScript. "
 msgstr ""
 
-#: js/jsindex.php:59
+#: js/jsindex.php:52
 msgid ""
 "While projects in the PHP section, as well as this whole site itself have "
 msgstr ""
 
-#: js/jsindex.php:60
+#: js/jsindex.php:53
 msgid ""
 "a fair amount of JavaScript included, this section is intended for projects "
 msgstr ""
 
-#: js/jsindex.php:61
+#: js/jsindex.php:54
 msgid "focusing on design, front end functionality, and aesthetics."
 msgstr ""
 
-#: js/jsindex.php:68 python/pyindex.php:72
+#: js/jsindex.php:61 python/pyindex.php:65
 msgid "Latest <span class=\"white\">Projects</span>"
 msgstr ""
 
@@ -268,194 +268,194 @@ msgstr ""
 msgid "Welcome to <span class=\"white\">News Admin</span>"
 msgstr ""
 
-#: php/phplist.php:57
+#: php/phplist.php:50
 msgid ""
 "This page contains links to projects I have done using PHP, MySQL and AJAX."
 msgstr ""
 
-#: php/stammbaum/addmember.php:52
+#: php/stammbaum/addmember.php:45
 msgid "Add New {"
 msgstr ""
 
-#: php/stammbaum/addmember.php:63 php/stammbaum/addmembersubmit.php:62
-#: php/stammbaum/addphotosubmit.php:63 php/stammbaum/editphotosubmit.php:62
-#: php/stammbaum/listall.php:70 php/stammbaum/listmembers.php:63
-#: php/stammbaum/searchsubmit.php:63
+#: php/stammbaum/addmember.php:56 php/stammbaum/addmembersubmit.php:55
+#: php/stammbaum/addphotosubmit.php:56 php/stammbaum/editphotosubmit.php:55
+#: php/stammbaum/listall.php:63 php/stammbaum/listmembers.php:56
+#: php/stammbaum/searchsubmit.php:56
 msgid "<meta http-equiv=\"refresh\" content=\"0; url=error.php?errmsg="
 msgstr ""
 
-#: php/stammbaum/addmember.php:70
+#: php/stammbaum/addmember.php:63
 msgid "<strong>First Name: </strong>"
 msgstr ""
 
-#: php/stammbaum/addmember.php:71
+#: php/stammbaum/addmember.php:64
 msgid "&nbsp;&nbsp;<strong>Last Name: </strong>"
 msgstr ""
 
-#: php/stammbaum/addmember.php:73
+#: php/stammbaum/addmember.php:66
 msgid "<strong>Middle Name: </strong>"
 msgstr ""
 
-#: php/stammbaum/addmember.php:74
+#: php/stammbaum/addmember.php:67
 msgid "&nbsp;&nbsp;<strong>Maiden Name: </strong>"
 msgstr ""
 
-#: php/stammbaum/addmember.php:76
+#: php/stammbaum/addmember.php:69
 msgid "<strong>Mother: </strong>"
 msgstr ""
 
-#: php/stammbaum/addmember.php:77
+#: php/stammbaum/addmember.php:70
 msgid "&nbsp;&nbsp;<strong>Father: </strong>"
 msgstr ""
 
-#: php/stammbaum/addmember.php:79
+#: php/stammbaum/addmember.php:72
 msgid "<strong>Sex:</strong>&nbsp;&nbsp;"
 msgstr ""
 
-#: php/stammbaum/addmember.php:81
+#: php/stammbaum/addmember.php:74
 msgid "Male"
 msgstr ""
 
-#: php/stammbaum/addmember.php:81
+#: php/stammbaum/addmember.php:74
 msgid "Female"
 msgstr ""
 
-#: php/stammbaum/addmember.php:85
+#: php/stammbaum/addmember.php:78
 msgid "<strong>Born:&nbsp;(mm/dd/yyyy)&nbsp;</strong>"
 msgstr ""
 
-#: php/stammbaum/addmember.php:122
+#: php/stammbaum/addmember.php:115
 msgid "<strong>Deceased:&nbsp;(mm/dd/yyyy)&nbsp;</strong>"
 msgstr ""
 
-#: php/stammbaum/addmember.php:161 php/stammbaum/addphoto.php:150
-#: php/stammbaum/editphoto.php:151
+#: php/stammbaum/addmember.php:154 php/stammbaum/addphoto.php:143
+#: php/stammbaum/editphoto.php:144
 msgid "<strong>Description:</strong>"
 msgstr ""
 
-#: php/stammbaum/addmember.php:163
+#: php/stammbaum/addmember.php:156
 msgid "&nbsp;&nbsp;<strong>Created by (your name):</strong>"
 msgstr ""
 
-#: php/stammbaum/addmembersubmit.php:52
+#: php/stammbaum/addmembersubmit.php:45
 msgid "New {"
 msgstr ""
 
-#: php/stammbaum/addmembersubmit.php:97
+#: php/stammbaum/addmembersubmit.php:90
 msgid ""
 "<meta http-equiv=\"refresh\" content=\"2; url=http://localhost/php/stammbaum/"
 "addnew.php\">"
 msgstr ""
 
-#: php/stammbaum/addphoto.php:67
+#: php/stammbaum/addphoto.php:60
 msgid "Upload a {"
 msgstr ""
 
-#: php/stammbaum/addphoto.php:118 php/stammbaum/editphoto.php:105
+#: php/stammbaum/addphoto.php:111 php/stammbaum/editphoto.php:98
 msgid "<strong>Date taken:&nbsp;(mm/dd/yyyy)&nbsp;</strong>"
 msgstr ""
 
-#: php/stammbaum/addphoto.php:153 php/stammbaum/editphoto.php:154
+#: php/stammbaum/addphoto.php:146 php/stammbaum/editphoto.php:147
 msgid "&nbsp;&nbsp;<strong>People pictured:</strong>"
 msgstr ""
 
-#: php/stammbaum/addphoto.php:155
+#: php/stammbaum/addphoto.php:148
 msgid "&nbsp;&nbsp;<strong>Uploaded by (your name):</strong>"
 msgstr ""
 
-#: php/stammbaum/addphotosubmit.php:52 php/stammbaum/listmembers.php:52
-#: php/stammbaum/listphotos.php:53 php/stammbaum/searchsubmit.php:52
+#: php/stammbaum/addphotosubmit.php:45 php/stammbaum/listmembers.php:45
+#: php/stammbaum/listphotos.php:46 php/stammbaum/searchsubmit.php:45
 msgid "{"
 msgstr ""
 
-#: php/stammbaum/addphotosubmit.php:88
+#: php/stammbaum/addphotosubmit.php:81
 msgid ""
 "<meta http-equiv=\"refresh\" content=\"0; url=error.php?errmsg=The required "
 "HTTP parameters were not found&redirect=addphoto.php?dbname="
 msgstr ""
 
-#: php/stammbaum/addphotosubmit.php:121
+#: php/stammbaum/addphotosubmit.php:114
 msgid ""
 "<meta http-equiv=\"refresh\" content=\"0; url=error.php?errmsg=That photo "
 "has already been uploaded to Stammbaum&redirect=addphoto.php?dbname="
 msgstr ""
 
-#: php/stammbaum/deletephoto.php:51 php/stammbaum/index.php:55
+#: php/stammbaum/deletephoto.php:44 php/stammbaum/index.php:48
 msgid ""
 "Welcome to Stammbaum: <span class=\"white\">The Family Tree Database</span>"
 msgstr ""
 
-#: php/stammbaum/deletephoto.php:77 php/stammbaum/editphoto.php:75
+#: php/stammbaum/deletephoto.php:70 php/stammbaum/editphoto.php:68
 #: php/stammbaum/sbutil.php:107 php/stammbaum/sbutil.php:114
 #: php/stammbaum/sbutil.php:128 php/stammbaum/sbutil.php:140
 msgid "<meta HTTP-EQUIV=\"refresh\" content=\"0; url=error.php?errmsg="
 msgstr ""
 
-#: php/stammbaum/deletephoto.php:91
+#: php/stammbaum/deletephoto.php:84
 msgid "Successfully deleted "
 msgstr ""
 
-#: php/stammbaum/deletephoto.php:97
+#: php/stammbaum/deletephoto.php:90
 msgid "Successfully removed "
 msgstr ""
 
-#: php/stammbaum/deletephoto.php:101
+#: php/stammbaum/deletephoto.php:94
 msgid "Could not locate photo in database.<br/>"
 msgstr ""
 
-#: php/stammbaum/editphoto.php:67
+#: php/stammbaum/editphoto.php:60
 msgid "Edit a {"
 msgstr ""
 
-#: php/stammbaum/editphoto.php:156
+#: php/stammbaum/editphoto.php:149
 msgid "&nbsp;&nbsp;<strong>Edited by (your name):</strong>"
 msgstr ""
 
-#: php/stammbaum/editphotosubmit.php:52
+#: php/stammbaum/editphotosubmit.php:45
 msgid "Edit Photo Complete <span class=\"white\">{"
 msgstr ""
 
-#: php/stammbaum/editphotosubmit.php:88
+#: php/stammbaum/editphotosubmit.php:81
 msgid "<meta http-equiv=\"refresh\" content=\"0; url=editphoto.php?dbname="
 msgstr ""
 
-#: php/stammbaum/error.php:40 php/stammbaum/listall.php:40
-#: php/stammbaum/newline.php:40 php/stammbaum/newlinesubmit.php:40
+#: php/stammbaum/error.php:33 php/stammbaum/listall.php:33
+#: php/stammbaum/newline.php:33 php/stammbaum/newlinesubmit.php:33
 msgid "Search Box"
 msgstr ""
 
-#: php/stammbaum/error.php:44 php/stammbaum/listall.php:44
-#: php/stammbaum/newline.php:44 php/stammbaum/newlinesubmit.php:44
+#: php/stammbaum/error.php:37 php/stammbaum/listall.php:37
+#: php/stammbaum/newline.php:37 php/stammbaum/newlinesubmit.php:37
 #: php/util.php:120
 msgid "Search"
 msgstr ""
 
-#: php/stammbaum/error.php:49 php/stammbaum/listall.php:49
-#: php/stammbaum/newline.php:49 php/stammbaum/newlinesubmit.php:49
+#: php/stammbaum/error.php:42 php/stammbaum/listall.php:42
+#: php/stammbaum/newline.php:42 php/stammbaum/newlinesubmit.php:42
 msgid "Sidebar Menu"
 msgstr ""
 
-#: php/stammbaum/error.php:72
+#: php/stammbaum/error.php:65
 msgid "Error: <span class=\"white\">"
 msgstr ""
 
-#: php/stammbaum/listall.php:59
+#: php/stammbaum/listall.php:52
 msgid "List <span class=\"white\">All</span>"
 msgstr ""
 
-#: php/stammbaum/listphotos.php:120
+#: php/stammbaum/listphotos.php:113
 msgid "There are currently no photos uploaded to the "
 msgstr ""
 
-#: php/stammbaum/newline.php:60 php/stammbaum/newlinesubmit.php:59
+#: php/stammbaum/newline.php:53 php/stammbaum/newlinesubmit.php:52
 msgid "Create New <span class=\"white\">Family Line</span>"
 msgstr ""
 
-#: php/stammbaum/newline.php:67
+#: php/stammbaum/newline.php:60
 msgid "<strong>Family Name: </strong>"
 msgstr ""
 
-#: php/stammbaum/newlinesubmit.php:63
+#: php/stammbaum/newlinesubmit.php:56
 msgid "<meta HTTP-EQUIV=\"refresh\" content=\"0; url=error.php\">"
 msgstr ""
 
@@ -491,180 +491,184 @@ msgstr ""
 msgid "Search photos and people"
 msgstr ""
 
-#: php/stammbaum/search.php:52
+#: php/stammbaum/search.php:45
 msgid "Search the {"
 msgstr ""
 
-#: php/stammbaum/search.php:62
+#: php/stammbaum/search.php:55
 msgid "<strong>Keyword: </strong>"
 msgstr ""
 
-#: php/stammbaum/search.php:63
+#: php/stammbaum/search.php:56
 msgid "<strong>Search in: </strong>"
 msgstr ""
 
-#: php/stammbaum/search.php:64
+#: php/stammbaum/search.php:57
 msgid "Photos"
 msgstr ""
 
-#: php/stammbaum/search.php:65
+#: php/stammbaum/search.php:58
 msgid "Profiles"
 msgstr ""
 
-#: php/stammbaum/search.php:67
+#: php/stammbaum/search.php:60
 msgid "Advanced Search"
 msgstr ""
 
-#: php/stammbaum/searchsubmit.php:84
+#: php/stammbaum/searchsubmit.php:77
 msgid ""
 "<meta http-equiv=\"refresh\" content=\"0; url=error.php?errmsg=No keyword "
 "entered&redirct=search.php?dbname="
 msgstr ""
 
-#: php/stammbaum/searchsubmit.php:115
+#: php/stammbaum/searchsubmit.php:108
 msgid "No photo names or descriptions contained keyword <strong>"
 msgstr ""
 
-#: php/stammbaum/searchsubmit.php:135
+#: php/stammbaum/searchsubmit.php:128
 msgid "No profile names or descriptions contained keyword <strong>"
 msgstr ""
 
-#: php/util.php:43
+#: php/util.php:45
 msgid "Spencer"
 msgstr ""
 
-#: php/util.php:43
+#: php/util.php:45
 msgid "Bartz"
 msgstr ""
 
-#: php/util.php:44
+#: php/util.php:46
 msgid "Portfolio Website"
 msgstr ""
 
-#: php/util.php:46 php/util.php:76 php/util.php:289
+#: php/util.php:48 php/util.php:78 php/util.php:288
 msgid "Home"
 msgstr ""
 
-#: php/util.php:46
+#: php/util.php:48
 msgid "Contact / Resume"
 msgstr ""
 
-#: php/util.php:46
+#: php/util.php:48
 msgid "Japanese"
 msgstr ""
 
-#: php/util.php:76
+#: php/util.php:78
 msgid "PHP / MySQL / AJAX"
 msgstr ""
 
-#: php/util.php:76
+#: php/util.php:78
 msgid "Java Applets"
 msgstr ""
 
-#: php/util.php:76
+#: php/util.php:78
 msgid "Java Applications"
 msgstr ""
 
-#: php/util.php:76
+#: php/util.php:78
 msgid "JavaScript"
 msgstr ""
 
-#: php/util.php:76
+#: php/util.php:78
 msgid "Python"
+msgstr ""
+
+#: php/util.php:115
+msgid "Close"
 msgstr ""
 
 #: php/util.php:116
 msgid "Search spencerbartz.com"
 msgstr ""
 
-#: php/util.php:255
+#: php/util.php:254
 msgid "Programming Languages"
 msgstr ""
 
-#: php/util.php:257
+#: php/util.php:256
 msgid "Download PHP"
 msgstr ""
 
-#: php/util.php:258
+#: php/util.php:257
 msgid "Download the Java Runtime Environment (JRE)"
 msgstr ""
 
-#: php/util.php:259
+#: php/util.php:258
 msgid "Download Java Development Kit (JDK)"
 msgstr ""
 
-#: php/util.php:260
+#: php/util.php:259
 msgid "Download Python"
 msgstr ""
 
-#: php/util.php:264
+#: php/util.php:263
 msgid "Programming Help / Tutorials"
 msgstr ""
 
-#: php/util.php:266
+#: php/util.php:265
 msgid "Stack Overflow"
 msgstr ""
 
-#: php/util.php:267
+#: php/util.php:266
 msgid "W3Schools"
 msgstr ""
 
-#: php/util.php:268
+#: php/util.php:267
 msgid "AJAX Tutorial"
 msgstr ""
 
-#: php/util.php:269
+#: php/util.php:268
 msgid "CGI Programming in Python"
 msgstr ""
 
-#: php/util.php:270
+#: php/util.php:269
 msgid "Java Tutorials at mykyong.com"
 msgstr ""
 
-#: php/util.php:271
+#: php/util.php:270
 msgid "PHP gettext tutorial"
 msgstr ""
 
-#: php/util.php:275
+#: php/util.php:274
 msgid "Software Downloads"
 msgstr ""
 
-#: php/util.php:277
+#: php/util.php:276
 msgid "Mozilla Firefox"
 msgstr ""
 
-#: php/util.php:278
+#: php/util.php:277
 msgid "Apache HTTP Server"
 msgstr ""
 
-#: php/util.php:279
+#: php/util.php:278
 msgid "MySQL Server"
 msgstr ""
 
-#: php/util.php:280
+#: php/util.php:279
 msgid "TextPad"
 msgstr ""
 
-#: php/util.php:281
+#: php/util.php:280
 msgid "Eclipse IDE"
 msgstr ""
 
-#: php/util.php:282
+#: php/util.php:281
 msgid "Localization Tool PO Edit"
 msgstr ""
 
-#: php/util.php:291
+#: php/util.php:290
 msgid "Spencer Bartz"
 msgstr ""
 
-#: php/util.php:303
+#: php/util.php:302
 msgid "Last updated: "
 msgstr ""
 
-#: python/copycat/index.php:56
+#: python/copycat/index.php:49
 msgid "Python > <span class=\"white\">Copy Cat</span>"
 msgstr ""
 
-#: python/pyindex.php:55
+#: python/pyindex.php:48
 msgid "Python <span class=\"white\">Projects</span>"
 msgstr ""
