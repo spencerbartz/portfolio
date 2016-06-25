@@ -2,9 +2,8 @@
 
 $siteRoot = "spencerbartz.com";
 //$siteRoot = "ipg.spencerbartzcom1";
-//also change the thing in "getPathToUtils"
 
-date_default_timezone_set('America/Los_Angeles');
+date_default_timezone_set("America/Los_Angeles");
 
 function changeLanguage()
 {
@@ -26,17 +25,13 @@ function getPathToUtils($fileName)
 		
 	//Check for file system that uses / instead of \
 	if(count($parts) == 1)
-	{
 		$parts = explode("/", $fileName);
-	}
-	
+
 	//Trick to figure out path to css and js util files.
 	$path = "";
 	for($i = count($parts) - 2; $i > 0; $i--)
 	{
-		//echo "parts: " . $parts[$i] . "</br>";
-		//if($parts[$i] === "ipg.spencerbartzcom1")
-		if($parts[$i] === "htdocs" || $parts[$i] === "ipg.spencerbartzcom1")
+		if($parts[$i] === "spencerbartz.com"|| $parts[$i] === "ipg.spencerbartzcom1")
 			break;
 		else 
 			$path = "../" . $path;
@@ -49,7 +44,7 @@ function printHeader($file)
 {
 	$path = getPathToUtils($file);
 
-	echo '<h1 id="logo-text"><a href="' . $path . 'index.php">Spencer<span>Bartz</span></a></h1>';
+	echo '<h1 id="logo-text"><a href="' . $path . 'index.php">' . _("Spencer") . "<span>" . _("Bartz") . '</span></a></h1>';
 	echo '<h2 id="slogan">' .  _("Portfolio Website") . '</h2>';
 	echo '<div id="header-links">';
 	echo '<p> <a href="' . $path . 'index.php">' . _("Home") . '</a> | <a href="' . $path . 'contact/contactresume.php">' . _("Contact / Resume") . '</a> | <a href="' . $path . 'index.php?locale=ja_JP" class="japanese">' . _("Japanese") . '</a> | <a href="' . $path . 'index.php" class="english">English</a></p>';
