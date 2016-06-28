@@ -224,7 +224,7 @@
 
 	function print_news()
 	{
-		include "news/dbconnect.php";
+		include "dbconnect.php";
 	
 		$sql = "select posttext, hashtags, dateposted from newsdb.posts order by dateposted desc";
 		

@@ -1,17 +1,15 @@
 <?php
-
 	$postid = "";
 	$posttext = "";
 
-	function printNewsLinks()
+	function print_news_links()
 	{
 		include 'dbconnect.php';
-    		$res = $mysqli->query("select id, dateposted, substring(posttext, 1, 100) as preview from posts");
+    	$mysqli = get_mysqli_connection("newsdb");	
+		$res = $mysqli->query("select id, dateposted, substring(posttext, 1, 100) as preview from posts");
     	
     		if(!$res)
-    		{
     			return false;
-    		}
         
     		if($res->num_rows > 0)
     		{
@@ -22,7 +20,7 @@
 		}
 	}
 	
-	function deletePost()
+	function delete_post()
 	{
 		if(isset($_GET["deleteid"]))
 		{
@@ -42,7 +40,7 @@
 		}
 	}
 	
-	function currentlyEditing()
+	function currently_editing()
 	{	
 		if($GLOBALS["postid"] !== "")
 		{
@@ -58,7 +56,7 @@
 		}
 	}
 
-	function processParams()
+	function process_params()
 	{
 		include 'dbconnect.php';
 		$sql = "";
@@ -122,12 +120,12 @@
 		}		
 	}
 	
-	function newsPostText()
+	function news_post_text()
 	{
 		echo $GLOBALS["posttext"];
 	}
 	
-	function newsPostId()
+	function news_post_Id()
 	{
 		echo $GLOBALS["postid"];
 	}

@@ -49,6 +49,7 @@
 			$desc = _('This page contains links to Applets I have created in the Java programming language. ' .
 			'They can be run within your web browser, however you will need to install the <a href="https://java.com/getjava">JRE</a> to run them. ' . 
 			'Be sure to check your security settings so that you are able to run each Applet correctly.');
+			println($desc);
         ?>
         </p>
         <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>

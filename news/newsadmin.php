@@ -43,14 +43,14 @@
     	<!-- Left Side (Main Content)-->
     	<div id="main">
       		<div class="box">
-      			<?php processParams(); ?>
+      			<?php process_params(); ?>
       			<h1><?php echo _('Welcome to <span class="white">News Admin</span>'); ?></h1>
-      			<?php currentlyEditing(); ?>
-      			<?php deletePost(); ?>
+      			<?php currently_editing(); ?>
+      			<?php delete_post(); ?>
         		<p>
             		<form action="newsadmin.php" method="post">
-                		<textarea style="width: 550px; height: 300px" name="posttext"><?php newsPostText(); ?></textarea><br />
-                		<input type="hidden" name="postid" value="<?php newsPostId(); ?>" />
+                		<textarea style="width: 550px; height: 300px" name="posttext"><?php new_post_text(); ?></textarea><br />
+                		<input type="hidden" name="postid" value="<?php news_post_id(); ?>" />
                 		<input type="submit" value="submit"/>
            			</form>
            			
@@ -62,7 +62,7 @@
 						<tr class="row-a">
 							<td>N/A</td><td>N/A</td><td><a href="newsadmin.php">CREATE NEW NEWS STORY</a></td><td>N/A</td>
 						</tr>
-						<?php printNewsLinks(); ?>
+						<?php print_news_links(); ?>
 					</table>	
         		</p>
       		</div>
