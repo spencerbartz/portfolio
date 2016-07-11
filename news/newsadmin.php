@@ -50,7 +50,7 @@
         		<p>
             		<form action="newsadmin.php" method="post">
                 		<textarea style="width: 550px; height: 300px" name="posttext"><?php new_post_text(); ?></textarea><br />
-                		<input type="hidden" name="postid" value="<?php news_post_id(); ?>" />
+                		<input type="hidden" name="postid" value="<?php news_postd(); ?>" />
                 		<input type="submit" value="submit"/>
            			</form>
            			

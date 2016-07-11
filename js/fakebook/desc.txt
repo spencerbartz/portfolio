@@ -1,7 +1,2 @@
-A front-end comment engine a la Facebook written in vanilla javascript and CSS3. As there is no back-end, the pre-filled comment and user
-lists are seeded with data loaded from JSON files. Based on this dummy data, the system assumes you are logged in as user 5, "Daniel Craig." You
-may post updates, and add comments on those updates. Comments are stored locally for as long as possible
-until they could theoretically be uploaded to a server (in the case of having a spotty connection where making frequent HTTP requests 
-is not possible). Note that the comments the user enters will persist even after closing the tab or the browser. Of course
-using a different browser or restarting the computer will clear this information. To manually clear the data in the comment
-list, using a javascript console in firefox or chrome, run Box.empty() and refresh the page.
+A Facebook-like comment engine written in vanilla javascript and CSS3. As there is no back-end, existing comments and user lists are pre-filled with JSON dummy data. Based on this, you are logged in as user 5, "Daniel Craig." You may post updates and add comments. Comments are stored locally for as long as possible
+until they could theoretically be uploaded to a server later (e.g. when experiencing intermittent connectivity). Comments the user enters should persist even after closing the tab or the browser. Using a different browser or rebooting clears the data. To manually Run <b>Box.empty()</b> from the JavaScript console and refresh the page to clear the comment list.

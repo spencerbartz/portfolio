@@ -1,8 +1,9 @@
 <?php
+	include "string_util.php";
+	include "path_util.php";
+	include "dbconnect.php";
+		
 	$default_locale = "en_US";
-	$prod_root = "ipg.spencerbartzcom1";
-	$dev_root = "spencerbartz.com";
-	
 	date_default_timezone_set("America/Los_Angeles");
 	set_language();
 	
@@ -15,26 +16,6 @@
 		setlocale(LC_ALL, $locale);
 		bindtextdomain("messages", "./locale");
 		textdomain("messages");
-	}
-
-	function get_relative_root_path($fileName)
-	{
-		$parts = explode("\\", $fileName);
-			
-		//Check for file system that uses / instead of \
-		if(count($parts) == 1)
-			$parts = explode("/", $fileName);
-	
-		//Trick to figure out path to css and js util files.
-		$path = "";
-		for($i = count($parts) - 2; $i > 0; $i--)
-		{
-			if(!strcmp($parts[$i], $GLOBALS["dev_root"]) || !strcmp($parts[$i], $GLOBALS["prod_root"]))
-				break;
-			else 
-				$path = "../" . $path;
-		}
-		return $path;
 	}
 
 	function print_header($file)
@@ -71,10 +52,10 @@
 	function print_nav($file)
 	{	
 		//hold all the file names for which we will create links in an array
-		$fileNames = array( "index.php", "php/phplist.php", "applets/appletlist.php", "applications/applicationlist.php", "js/jsindex.php", "python/pyindex.php");
+		$fileNames = array( "index.php", "php/phplist.php", "applications/applicationlist.php", "js/jsindex.php", "python/pyindex.php");
 			
 		//hold all the display names for the files in a parallel array
-		$dispNames = array(_("Home"), _("PHP / MySQL / AJAX"), _("Java Applets"), _("Java Applications"), _("JavaScript"), _("Python"));
+		$dispNames = array(_("Home"), _("PHP / MySQL / AJAX"), _("Java Applications"), _("JavaScript"), _("Python"));
 			
 		$path = get_relative_root_path($file);
 		
@@ -137,25 +118,6 @@
 			$pieces[$i] = strtoupper($pieces[$i][0]) . substr($pieces[$i], 1);
 			
 		return implode(" ", $pieces);
-	}
-
-	/********************* STRING HELPER FUNCTIONS *********************/
-	function starts_with($haystack, $needle)
-	{
-		return $needle === "" || strpos($haystack, $needle) === 0;
-	}
-
-	function ends_with($haystack, $needle)
-	{
-		return $needle === "" || substr($haystack, -strlen($needle)) === $needle;
-	}
-
-	function println($text, $webmode = FALSE)
-	{
-		if($webmode)
-			echo $text . "<br/>";
-		else
-			echo $text . PHP_EOL;	
 	}
 
 	//Print out a table with links and information about each project
@@ -224,8 +186,7 @@
 
 	function print_news()
 	{
-		include "dbconnect.php";
-	
+		$mysqli = get_mysqli_connection("newsdb");
 		$sql = "select posttext, hashtags, dateposted from newsdb.posts order by dateposted desc";
 		
 		if(!$res = $mysqli->query($sql))
@@ -396,5 +357,13 @@
 		$challenge = $operands[0] . " * " . $operands[1] . " - " . $operands[2] . " = ";
 		$result    = $operands[0] * $operands[1] - $operands[2];
 		return array($challenge, $result);
+	}
+	
+	
+
+	
+	function get_config()
+	{
+		return false;
 	}
 ?>

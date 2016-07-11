@@ -1,5 +1,5 @@
 <?php
-	include '../php/util.php';
+	include '../util/util.php';
 	print_page_dec(__FILE__);
 ?>
 
@@ -43,8 +43,8 @@
 //http://element-80.com/2010/11/php-tutorial-how-to-sanitize-form-data/#sthash.s1fuFP0L.dpuf
 function check_input($data) 
 {
-	include 'dbconnect.php';
-	$data = trim($data); 
+	$mysqli =  get_mysqli_connection("forumdb");
+	$dataforumdb = trim($data); 
 	$data = stripslashes($data); 
 	$data = htmlspecialchars($data); 
 	$data = $mysqli->real_escape_string($data);

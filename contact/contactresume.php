@@ -1,5 +1,4 @@
 <?php
-	include '../php/util.php';
 	print_page_dec(__FILE__);
 ?>
 

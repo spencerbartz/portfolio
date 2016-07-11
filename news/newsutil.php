@@ -25,35 +25,25 @@
 		if(isset($_GET["deleteid"]))
 		{
 			include 'dbconnect.php';
-			
+			$mysqli = get_mysqli_connection("newsdb");
 			$sql = "delete from posts where id=" . $_GET["deleteid"];
 			$res = $mysqli->query($sql);
 
 			if($res)
-			{
 				echo "<h3>Deleted post: " . $_GET["deleteid"] . "</h3>";
-			}
 			else
-			{
 				die("failed to delete post");
-			}
 		}
 	}
 	
 	function currently_editing()
 	{	
 		if($GLOBALS["postid"] !== "")
-		{
 			echo "<h3>Currently Editing Post id: " . $GLOBALS["postid"] . "</h3>";
-		}
 		else if($GLOBALS["posttext"])
-		{
 			echo "<h3>New Post Created!</h3>";
-		}
 		else
-		{
 			echo "<h3>New News Story</h3>";
-		}
 	}
 
 	function process_params()
