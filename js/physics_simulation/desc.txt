@@ -1,1 +1,1 @@
-Revamped for 2016! An HTML5 / JavaScript adaptation of a projectile motion Java Applet I wrote for a college extra credit project many years ago.
+Revamped for 2016! An HTML5 / JavaScript adaptation of my old projectile motion Applet.
