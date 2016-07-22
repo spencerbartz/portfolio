@@ -1,4 +1,5 @@
 <?php
+	include '../util/util.php';
 	print_page_dec(__FILE__);
 ?>
 
@@ -68,7 +69,7 @@
         <div id="erremail"><?php echo _("Email: "); ?></div><input name="email" class="textbox" type="text" /><br/><br/>
         <div id="errsubject"><?php echo _("Subject: "); ?></div><input name="subject" class="textbox" type="text" /><br/><br/>
         <div id="errmessage"><?php echo _("Message: "); ?></div><textarea name="message" rows="50" cols="100"></textarea><br/>
-		<div id="erruserresult"><?php echo _("Prove you're a human: "); ?></div><?php echo $botCheck[0]; ?><input name="userresult" class="textbox" type="text" /><br/><br/>
+		<div id="erruserresult"><?php echo _("Prove you're a human (negative numbers are OK): "); ?></div><?php echo $botCheck[0]; ?><input name="userresult" class="textbox" type="text" /><br/><br/>
         <input name="result" type="hidden" value="<?php echo $botCheck[1]; ?>">
 		<input name="txtmsg" value="txtmsg" type="checkbox" /> <?php echo _('Send me a text message'); ?><br/><br/>
         <input name="submit" class="button" value="<?php echo _('Submit'); ?>" type="submit" /><br/>

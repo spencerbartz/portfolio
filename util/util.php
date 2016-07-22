@@ -25,12 +25,13 @@
 		println('<h1 id="logo-text"><a href="' . $path . 'index.php">' . _("Spencer") . "<span>" . _("Bartz") . '</span></a></h1>');
 		println('<h2 id="slogan">' .  _("Portfolio Website") . '</h2>');
 		println('<div id="header-links">');
-		println('<p> <a href="' . $path . 'index.php">' . _("Home") . '</a> | <a href="' . $path . 'contact/contactresume.php">' . _("Contact / Resume") . '</a> | <a href="' . $path . 'index.php?locale=ja_JP" class="japanese">' . _("Japanese") . '</a> | <a href="' . $path . 'index.php" class="english">English</a></p>');
+		println('<p> <a href="' . $path . 'index.php">' . _("Home") . '</a> | <a href="' . $path . 'contact' . DIRECTORY_SEPARATOR . 'contactresume.php">' . _("Contact / Resume") . '</a> | <a href="' . $path . 'index.php?locale=ja_JP" class="japanese">' . _("Japanese") . '</a> | <a href="' . $path . 'index.php" class="english">English</a></p>');
 		println('</div>');
 	}
 
 	function print_page_dec($file)
 	{
+		$DS = DIRECTORY_SEPARATOR;
 		println('<!doctype html>');
 		println('<html xmlns="http://www.w3.org/1999/xhtml">');
 		println('<head>');
@@ -39,23 +40,24 @@
 		println('<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />');
 		println('<meta name="Distribution" content="Global" />');
 		
-		$path = get_relative_root_path($file);
+		$path =  get_relative_root_path($file);
 		
-		println('<link rel="stylesheet" href="' . $path . 'css/BluePigment.css" type="text/css" />');
-		println('<link rel="shortcut icon" href="' . $path . 'images/favicon.ico" />');
-		println('<script type="text/javascript" src="' . $path . 'js/jquery-1.11.2.min.js"></script>');
-		println('<script type="text/javascript" src="' . $path . 'js/util.js"></script>');
+		println('<link rel="stylesheet" href="' . $path . 'css' . $DS . 'BluePigment.css" type="text/css" />');
+		println('<link rel="shortcut icon" href="' . $path . 'images' . $DS . 'favicon.ico" />');
+		println('<script type="text/javascript" src="' . $path . 'js' . $DS . 'jquery-1.11.2.min.js"></script>');
+		println('<script type="text/javascript" src="' . $path . 'js' . $DS . 'util.js"></script>');
 	}
 
 	//Print the navigation bar at the top of the page with links to all project categories
 	//depending on the location of $file - The file that invoked this function
 	function print_nav($file)
-	{	
+	{
+		$DS = DIRECTORY_SEPARATOR;
 		//hold all the file names for which we will create links in an array
-		$fileNames = array( "index.php", "php/phplist.php", "applications/applicationlist.php", "js/jsindex.php", "python/pyindex.php");
+		$fileNames = array( "index.php", "js" . $DS . "jsindex.php", "php" .  $DS . "phplist.php", "applications" . $DS . "applicationlist.php", "python" . $DS . "pyindex.php");
 			
 		//hold all the display names for the files in a parallel array
-		$dispNames = array(_("Home"), _("PHP / MySQL / AJAX"), _("Java Applications"), _("JavaScript"), _("Python"));
+		$dispNames = array(_("Home"), _("JavaScript"), _("PHP / MySQL / JS"), _("Java"), _("Python"));
 			
 		$path = get_relative_root_path($file);
 		
@@ -191,7 +193,7 @@
 		
 		if(!$res = $mysqli->query($sql))
 		{
-			println("Failed to selectpost: (" . $mysqli->errno . ") " . $mysqli->error);
+			println("Failed to select post: (" . $mysqli->errno . ") " . $mysqli->error);
 			die();
 		}
 		

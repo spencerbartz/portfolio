@@ -1,5 +1,5 @@
 <?php
-	include '../php/util.php';
+	include '../util/util.php';
 	include 'newsutil.php';
 	print_page_dec(__FILE__);
 ?>
@@ -14,7 +14,7 @@
 		}
 	}
 </script>
-</head>
+</head>	
 
 	<div id="overlay"></div>
 	
@@ -49,8 +49,8 @@
       			<?php delete_post(); ?>
         		<p>
             		<form action="newsadmin.php" method="post">
-                		<textarea style="width: 550px; height: 300px" name="posttext"><?php new_post_text(); ?></textarea><br />
-                		<input type="hidden" name="postid" value="<?php news_postd(); ?>" />
+                		<textarea style="width: 550px; height: 300px" name="posttext"><?php news_post_text(); ?></textarea><br />
+                		<input type="hidden" name="postid" value="<?php news_post_id(); ?>" />
                 		<input type="submit" value="submit"/>
            			</form>
            			
