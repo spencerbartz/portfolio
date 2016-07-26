@@ -1,2 +1,6 @@
-A Facebook-like comment engine written in vanilla javascript and CSS3. As there is no back-end, existing comments and user lists are pre-filled with JSON dummy data. Based on this, you are logged in as user 5, "Daniel Craig." You may post updates and add comments. Comments are stored locally for as long as possible
-until they could theoretically be uploaded to a server later (e.g. when experiencing intermittent connectivity). Comments the user enters should persist even after closing the tab or the browser. Using a different browser or rebooting clears the data. To manually Run <b>Box.empty()</b> from the JavaScript console and refresh the page to clear the comment list.
+A Facebook-ish, JavaScript / CSS3 comment UI that stores local data in case of periodic connection loss. Pre-filled comments and users are loaded from server-side JSON files.
+
+You are logged in as user <b>id #5</b>, "Daniel Craig." 
+You can post, comment, and comment on other people's posts.
+
+All comments should persist even after closing the tab or browser. To clear the comments manually, open a JS console, then run <b>Box.empty()</b> and refresh the page.

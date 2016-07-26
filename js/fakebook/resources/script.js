@@ -419,7 +419,7 @@ function fadeCallBack(element, onCompleteFunc)
  * @param   Event e		The keypress event
  * @return  void
  */
-function keyUpHandler(event)
+function keyUpHandler()
 {
 	var x = event.which || event.keyCode;
 

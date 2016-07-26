@@ -1,2 +1,0 @@
-Simple Draw is a paint program similar to early versions of Microsoft Windows paint. Basic shapes can be drawn,
-actions can be undone and redone, and a copy of the image can be saved to the "Hall of Fame."

@@ -1,1 +1,0 @@
-Revamped for 2016! An HTML5 / JavaScript adaptation of my old projectile motion Applet.

@@ -48,13 +48,10 @@
         <h1><?php println(_("Python")); ?><span class="white"><?php println(_("Projects")); ?></span></h1>
         <p>
         <?php
-                $desc = _('This page contains links to my Python projects. ' .
-                'I learned Python while working at Novacoast in 2007 and came to respect the ' .
-                'great power it can deliver in application programming. ' .
-                'Until I can find hosting where I can set up Django these projects will be ' .
-                'desktop / command line applications');
-		
-                echo $desc;
+                echo _("This page contains links to my Python projects. ".
+                "I picked it up at Novacoast in 2007 and really grew to like it. " .
+				"This page doesn't have much yet, but it's up and coming!"
+				);
         ?>
         </p>
         <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>

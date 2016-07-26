@@ -1,3 +1,1 @@
-AddressBook is a Java Application that stores [Email, Phone, Address] entries in a linked list. The data is 
-presented to the user in a GUI and allows users to add, delete, and edit entries. The contents of the list 
-can be output to a file, and previously saved lists can be loaded. 
+Contact list that stores [Email, Phone, Address] entries in a linked list internally. The GUI povides users with options add, delete, and edit entries. The contents of the list can be output to a file. The file can be read in when the app starts so that your contacts persist.

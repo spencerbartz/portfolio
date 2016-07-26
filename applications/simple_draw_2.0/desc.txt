@@ -1,5 +1,4 @@
-SimpleDraw 2.0 is a paint program a la MS Paint. SimpleDraw 1.0 is currently in the <a href="../applets/simpledraw/index.php">Applets</a>
-section. With security restrictions introduced in Java 1.8 and the dominance of JavaScript and Flash for web applications, Applets have
-become more trouble than they are worth. SimpleDraw 2.0 offers the stability of a Desktop application while still providing the 
-"upload to hall of fame" functionality that was included in SimpleDraw 1.0. The simpledraw2.0.jar file is runnable and should launch on 
-double click if your java configuration is set up to do so. If not, it can be run from the command line with <strong>java -jar simpledraw2.0.jar</strong>
+SimpleDraw 2.0 is a desktop paint program a la MS Paint. 
+Whereas SimpleDraw 1.0 was an Applet, which modern browsers do not support. SimpleDraw 2.0 offers the stability of a Desktop application with the safety of being a stand-alone desktop app.
+
+Download the .jar file (make sure you have java installed) then double click it. If this doesn't work run from the command line with <strong>$: java -jar simpledraw2.0.jar</strong>

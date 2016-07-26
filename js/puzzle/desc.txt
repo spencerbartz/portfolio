@@ -1,3 +1,1 @@
-Puzzle version 1.0 - Puzzle pieces can be "grabbed" by clicking on them and they stick to the cursor until you plop them down somewhere.
-I got the idea from seeing a friend's "dress your character" web app he said was "DHTML." I became curious about this technique so I made this 
-while I was living in Japan (hence the seafood theme!) using JavaScript to manipulate &lt;div&gt; positions based on mouse events. 
+This one is something I cooked up while living in Japan. There isn't major functionality yet but it has potential. Grab a puzzle piece by clicking it, then click again to drop it in place. You should see a picture, but unfortunately there is no prize yet.

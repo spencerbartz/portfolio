@@ -6,7 +6,7 @@
 
 */
 
-	include '../php/util.php';
+	include '../util/util.php';
 
 	/*
 	* Extract a string between two other strings. The text in between will be in $matches[1]
@@ -16,18 +16,13 @@
 		$regex = "/" . $start . "(.*)" . $finish . "/" . $flags;
 	
 		if(preg_match($regex, $string, $matches))
-		{
 			return $matches[1];
-		}
 		else
-		{
 			return FALSE;
-		}
 	}
 	
 	/*
 	* Extract the title from the <title></title> tag (if it exists)
-	* Function assumes 
 	* Receives: $file (string) - file name
 	* Returns: (string) - the text inside the <title> tag (if applicable inside gettext _() function)
 	*/
@@ -39,9 +34,7 @@
 		{
 			//handle gettext string, if present
 			if($between2 = getStringBetween($between, "_\(\"", "\"\)", "s"))
-			{
 				return trim($between2);
-			}
 			
 			return trim($between);
 		}
@@ -54,15 +47,13 @@
 	
 	function myCurl($url, $space)
 	{
-		//Make the cURL request
 		println($space . "Attempting CURL on " . $url);
 		
-		//obtain our curl handle
+		//Obtain our curl handle for request
 		$ch = $GLOBALS['curl_handle'];
-		// set URL and other appropriate options
-		curl_setopt($ch, CURLOPT_URL, $url);
 		
-		// grab URL and pass it to the browser
+		// set target URL,  other options, then fire request
+		curl_setopt($ch, CURLOPT_URL, $url);
 		$output = curl_exec($ch);
 
 		// Check for errors and display the error message

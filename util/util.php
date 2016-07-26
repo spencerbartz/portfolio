@@ -53,28 +53,20 @@
 	function print_nav($file)
 	{
 		$DS = DIRECTORY_SEPARATOR;
-		//hold all the file names for which we will create links in an array
-		$fileNames = array( "index.php", "js" . $DS . "jsindex.php", "php" .  $DS . "phplist.php", "applications" . $DS . "applicationlist.php", "python" . $DS . "pyindex.php");
-			
-		//hold all the display names for the files in a parallel array
-		$dispNames = array(_("Home"), _("JavaScript"), _("PHP / MySQL / JS"), _("Java"), _("Python"));
+		//Parallel Arrays to hold user names and internal names
+		$fileNames = array( "index.php", "js" . $DS . "jsindex.php", "php" .  $DS . "phpindex.php", "applications" . $DS . "applicationindex.php", "python" . $DS . "pyindex.php",  "c" . $DS . "cindex.php");
+		$dispNames = array(_("Home"), _("JavaScript"), _("Full Stack  LAMP Apps"), _("Core Java Apps"), _("Python"), _("C Programming"));
 			
 		$path = get_relative_root_path($file);
-		
-		//Account for file system that uses / instead of \
-		$parts = explode("\\", $file);
-				
-		if(count($parts) == 1)
-			$parts = explode("/", $file);
+		$parts = explode($DS, $file);
 		
 		$thisFile = $parts[count($parts) - 1];
-					
-			println('<ul> ');
+		println('<ul> ');
 			
 		for($i = 0; $i < count($fileNames); $i++)
 		{
 			//Just get the file name, not the folder it might be in
-			$fileName = explode("/", $fileNames[$i]);
+			$fileName = explode($DS, $fileNames[$i]);
 			$fileName = $fileName[count($fileName) - 1];
 			$li = "<li>";
 				
@@ -192,10 +184,7 @@
 		$sql = "select posttext, hashtags, dateposted from newsdb.posts order by dateposted desc";
 		
 		if(!$res = $mysqli->query($sql))
-		{
-			println("Failed to select post: (" . $mysqli->errno . ") " . $mysqli->error);
-			die();
-		}
+			die("Failed to select post: (" . $mysqli->errno . ") " . $mysqli->error);
 		
 		if($res->num_rows > 0)
 		{
@@ -258,8 +247,7 @@
 		println('</p>');
 	}
 
-	function last_updated($filename)
-	{
+	function last_updated($filename) {
 		if (file_exists($filename)) 
 			println( _("Last updated: ") . date ("F d, Y H:i:s", filemtime($filename)) . " PST");
 	}
@@ -327,11 +315,6 @@
 		}
 	}
 
-	function alert($str)
-	{
-		echo '<script type="text/javascript">alert("' . $str . '");</script>';
-	}
-
 	function delete_directory($dir)
 	{
 		if (!file_exists($dir))
@@ -361,11 +344,12 @@
 		return array($challenge, $result);
 	}
 	
+	// Debug Functions
+	function alert($str) {
+		echo '<script type="text/javascript">alert("' . $str . '");</script>';
+	}
 	
-
-	
-	function get_config()
-	{
-		return false;
+	function console_log($str) {
+		echo 'console.log("' . $str . '");';
 	}
 ?>

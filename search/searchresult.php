@@ -1,5 +1,5 @@
 <?php
-	include '../php/util.php';
+	include '../util/util.php';
 	print_page_dec(__FILE__);
 ?>
 
@@ -42,10 +42,8 @@
 		if(isset($_POST['search_query']))
 		{
 			$searchStr = $_POST['search_query'];
-			
-			include '../php/dbconnect.php';
-			
 			$sql = "select * from pages where pagetext like '%" . $searchStr . "%'";
+			$mysqli =  get_mysqli_connection("searchdb");
 		
 			if(!$res = $mysqli->query($sql)) 
 			{

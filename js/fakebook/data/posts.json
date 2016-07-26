@@ -3,14 +3,14 @@
 		"id": 1,
 		"userId": 1,
 		"date": "",
-		"content":"Love wine? Love food? Love to win an iPad 2 with gift certificates to your favorite IA winery & Dine IA restaurant. http://bit.ly/xQ4Ls8",
+		"content":"Everyone knows I was the best James Bond.",
 		"comments": [
 			{
 				"id": 13,
 				"postId": 1,
 				"userId": 3,
 				"date": "",
-				"content": "Would you happen to know were Capone is? Since you are a secret agent and all"
+				"content": "I don't know. I liked you better in Indiana Jones."
 			}
 		
 		]
@@ -60,7 +60,7 @@
 		"id": 5,
 		"userId": 3,
 		"date": "",
-		"content":"I want to thank ALL MY FIRENDS BOTH OLD AND NEW FOR THE ENCOURAGING WORDS....LOVE YOU GUYS!!!!!",
+		"content":"I want to thank ALL MY FRIENDS BOTH OLD AND NEW FOR THE ENCOURAGING WORDS....LOVE YOU GUYS!!!!!",
 		"comments": []
 	
 	},

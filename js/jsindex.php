@@ -48,10 +48,9 @@
         <h1><?php echo _('JavaScript <span class="white">Projects</span>'); ?></h1>
         <p>
         <?php
-		echo _('This page contains links to some projects I have created in JavaScript. ');
-		echo _('While projects in the PHP section, as well as this whole site itself have ');
-		echo _('a fair amount of JavaScript included, this section is intended for projects ');
-		echo _('focusing on design, front end functionality, and aesthetics.');
+		echo _('This page contains projects I have programmed in JavaScript. ' . 
+					'While projects in the PHP section, as well as this whole site itself include ' .
+					'JavaScript, this section is intended for projects focusing on UX and aesthetics.');
         ?>
         </p>
         <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>

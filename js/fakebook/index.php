@@ -1,3 +1,6 @@
+<?php
+	include "util.php";
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -17,7 +20,7 @@
 		<div id="dialog" class="dialog rounded">
 			<p id="updatetitle">Status Update</p>
 			<form>
-				<textarea id="dialogText" class="rounded" onkeyup="keyUpHandler(event)"></textarea>
+				<textarea id="dialogText"></textarea>
 			</form>
 			<p>Press enter to post</p>
 		</div>
@@ -77,7 +80,7 @@
 	</div>
 
 	<div class="footer">
-		<p>&copy;Spencer Bartz 2015</p>
+		<p>&copy;<?php echo date("Y"); ?></p>
 		<p><a href="http://www.spencerbartz.com">spencerbartz.com</a></p>
 
 	</div>
