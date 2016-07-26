@@ -48,10 +48,9 @@
         <h1><?php println(_("Python")); ?><span class="white"><?php println(_("Projects")); ?></span></h1>
         <p>
         <?php
-                echo _("This page contains links to my Python projects. ".
-                "I picked it up at Novacoast in 2007 and really grew to like it. " .
-				"This page doesn't have much yet, but it's up and coming!"
-				);
+                echo _("This page contains projects I have programmed in Python. ".
+								"At a previous job I learned and came to love python. I felt " .
+								"like I had the power of C but the ease of a modern scripting language.");
         ?>
         </p>
         <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>

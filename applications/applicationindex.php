@@ -1,17 +1,18 @@
-<?php
+	<?php
 	include '../util/util.php';
 	print_page_dec(__FILE__);
 ?>
 
 <title><?php echo _("Spencer Bartz - Portfolio Website"); ?></title>
 </head>
+
 <?php
 	//Check to see if this page is being searched for a string.
 	//If so, call the js highlighting function after page loads.
 	if(isset($_GET['searchstr']))
-		echo '<body onload="selectSearchWords(\'' . $_GET['searchstr'] . '\')">';
+		println('<body onload="selectSearchWords(\'' . $_GET['searchstr'] . '\')">');
 	else
-		echo '<body>';
+		println('<body>');
 ?>
 	<div id="overlay"></div>
 <!-- header starts here -->
@@ -45,24 +46,26 @@
     <!-- Left Side (Main Content)-->
     <div id="main">
       <div class="box">
-        <h1><?php echo _('JavaScript <span class="white">Projects</span>'); ?></h1>
+        <h1>Java Application <span class="white">Projects</span></h1>
         <p>
         <?php
-		echo _('This page contains projects I have programmed in Java . ' . 
-					'While projects in the PHP section, as well as this whole site itself include ' .
-					'JavaScript, this section is intended for projects focusing on UX and aesthetics.');
-        ?>
+		echo _('This page lists Desktop Applications I have created in the Java programming language. ' .
+		'Download the .jar file and verify your <a href="https://java.com/getjava">JRE</a>  version. ' .
+		'After JRE installation, .jar files should just run when double clicked. If not follow the project instructions in the table below.');
+
+	?>
         </p>
-        <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>
+        <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span></p>
       </div>
       
+      
       <div class="box">
-        <h1><?php echo _('Latest <span class="white">Projects</span>'); ?></h1>
-        <?php 
-        	print_project_links(); 
-        ?>
+        <h1>Latest <span class="white">Projects</span></h1>
+	<?php
+		print_project_links();
+	?>
       </div>
-      <br/>
+      <br />
     </div>
     <!-- content-wrap ends here -->
   </div>
@@ -71,9 +74,9 @@
 <!-- footer starts here-->
 <div id="footer-wrap">
   <div id="footer-columns">
-  	<?php
-  		print_footer(__FILE__);
-  	?>
+	<?php
+		print_footer(__FILE__);
+	?>
   </div>
   <!-- footer ends-->
 </div>

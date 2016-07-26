@@ -3,7 +3,7 @@
 	print_page_dec(__FILE__);
 ?>
 
-<title><?php echo _("Spencer Bartz - Portfolio Website"); ?></title>
+<title><?php println(_("Spencer Bartz - Portfolio Website")); ?></title>
 </head>
 <?php
 	//Check to see if this page is being searched for a string.
@@ -45,24 +45,21 @@
     <!-- Left Side (Main Content)-->
     <div id="main">
       <div class="box">
-        <h1><?php echo _('JavaScript <span class="white">Projects</span>'); ?></h1>
+        <h1>Full Stack LAMP Applications <span class="white">Projects</span></h1>
         <p>
-        <?php
-		echo _('This page contains projects I have programmed in Java . ' . 
-					'While projects in the PHP section, as well as this whole site itself include ' .
-					'JavaScript, this section is intended for projects focusing on UX and aesthetics.');
-        ?>
+		<?php
+			echo _('This page contains Full-Stack LAMP projects I have programmed using Linux, Apache, MySQL, and PHP. ' .
+							'Each project consists of MySQL, PHP, JavaScript, CSS3, and HTML5. With these apps I hope to illustrate '.
+							'my skills in full stack development.');
+			?>
         </p>
         <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>
       </div>
-      
       <div class="box">
-        <h1><?php echo _('Latest <span class="white">Projects</span>'); ?></h1>
-        <?php 
-        	print_project_links(); 
-        ?>
+        <h1>Latest <span class="white">Projects</span></h1>
+		<?php print_project_links(); ?>
       </div>
-      <br/>
+      <br />
     </div>
     <!-- content-wrap ends here -->
   </div>
@@ -71,8 +68,8 @@
 <!-- footer starts here-->
 <div id="footer-wrap">
   <div id="footer-columns">
-  	<?php
-  		print_footer(__FILE__);
+   	<?php
+   		print_footer(__FILE__);
   	?>
   </div>
   <!-- footer ends-->
