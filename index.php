@@ -56,8 +56,9 @@
         	"Web based projects can be run as-is. Java and Python require installation of " .
         	"a separate runtime environment. Links to those downloads are at the bottom of the page. " .
 			"The site itself is written using PHP, JavaScript, and MySQL. " .
-			"I changed the original CSS, taken from <a href=\"http://www.styleshout.com\">styleshout.com</a> , to " .
-			"meet the aesthetic and functional requirements of this website. <br/>");
+			"I changed the original CSS, taken from <a href=\"http://www.styleshout.com\">styleshout.com</a>, to " .
+			"meet the aesthetic and functional requirements of this website. <br/> This source code of this entire site is available as a public ".
+			"<a href=\"https://github.com/spencerbartz/spencerbartz.com\"> repository on GitHub.</a>" );
 			
 			println($desc);
         ?>
