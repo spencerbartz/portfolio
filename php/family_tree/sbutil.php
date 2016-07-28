@@ -30,29 +30,29 @@ function printMenu($curPage, $curDB = "")
 <ul>
    <li class="active has-sub"><a href="#"><span><?php echo ("Menu"); ?></span></a>
       <ul>
-         <li class="last"><a href="index.php<?php echo $curDB; ?>"><span><?php echo _("Stammbaum Main"); ?></span></a></li>
+         <li class="last"><a href="index.php<?php echo $curDB; ?>"><span><?php echo _("Family Tree Main"); ?></span></a></li>
          <li class="has-sub"><a href="search.php<?php echo $curDB; ?>"><span><?php echo _("Select Family Line"); ?></span></a>
             <ul>
             <?php
-            	include "dbconnect.php";
+            	$mysqli = get_mysqli_connection($curDB);
 		
-		$sql = "SELECT familyname FROM familynames"; 
+				$sql = "SELECT familyname FROM familynames"; 
         	
-        	if(!$res = $mysqli->query($sql))
-        	{
-        		echo "<li><span><a>No lines created yet.</a></span></li>";
-        	}
-        	else
-        	{
-        		$res = $mysqli->query($sql);
-        	
-        		while($row = $res->fetch_array(MYSQLI_NUM))
-        		{
-        		?>
-        			<li><a href="<?php echo $curPage . "?dbname=" . $row[0]; ?>&lineselect=1"><span><?php echo $row[0]; ?></span></a></li>
-        		<?php
-        		}
-        	}
+				if(!$res = $mysqli->query($sql))
+				{
+					echo "<li><span><a>No lines created yet.</a></span></li>";
+				}
+				else
+				{
+					$res = $mysqli->query($sql);
+				
+					while($row = $res->fetch_array(MYSQLI_NUM))
+					{
+					?>
+						<li><a href="<?php echo $curPage . "?dbname=" . $row[0]; ?>&lineselect=1"><span><?php echo $row[0]; ?></span></a></li>
+					<?php
+					}
+				}
         	
             
             ?>
@@ -97,21 +97,22 @@ function getCurDB()
 
 function createDB($dbname)
 {
-	include 'dbconnect.php';
 	$familyname = $_POST["familyname"];
 	
+	$mysqli = get_mysqli_connection();
+			
 	$sql = "CREATE TABLE IF NOT EXISTS familynames(id int not null AUTO_INCREMENT, familyname varchar(255), datecreated DATE, PRIMARY KEY(id))";
 	
 	if(!$mysqli->query($sql))
 	{ 
-		echo _('<meta HTTP-EQUIV="refresh" content="0; url=error.php?errmsg=' . urlencode("Failed to create family line. Redirecting..." . "(" . $mysqli->errno . ") " . $mysqli->error) . '">');
+		//echo _('<meta HTTP-EQUIV="refresh" content="0; url=error.php?errmsg=' . urlencode("Failed to create family line. Redirecting..." . "(" . $mysqli->errno . ") " . $mysqli->error) . '">');
 	}
 	
 	$sql = "INSERT INTO familynames VALUES(NULL, '" . $familyname . "', NOW())";
 	
 	if(!$mysqli->query($sql))
 	{ 
-		echo _('<meta HTTP-EQUIV="refresh" content="0; url=error.php?errmsg=' . urlencode("Failed to create family line. Redirecting..." . "(" . $mysqli->errno . ") " . $mysqli->error) . '">');
+		//echo _('<meta HTTP-EQUIV="refresh" content="0; url=error.php?errmsg=' . urlencode("Failed to create family line. Redirecting..." . "(" . $mysqli->errno . ") " . $mysqli->error) . '">');
 	}
 	else
 	{
@@ -125,7 +126,7 @@ function createDB($dbname)
 	
 	if(!$mysqli->query($sql))
 	{
-		echo _('<meta HTTP-EQUIV="refresh" content="0; url=error.php?errmsg=' . urlencode("Failed to create people table. " . "(" . $mysqli->errno . ") " . $mysqli->error) . '">');
+		//echo _('<meta HTTP-EQUIV="refresh" content="0; url=error.php?errmsg=' . urlencode("Failed to create people table. " . "(" . $mysqli->errno . ") " . $mysqli->error) . '">');
 	}
 	else
 	{
@@ -137,22 +138,24 @@ function createDB($dbname)
 	
 	if(!$mysqli->query($sql))
 	{
-		echo _('<meta HTTP-EQUIV="refresh" content="0; url=error.php?errmsg=' . urlencode("Failed to create photos table. " . "(" . $mysqli->errno . ") " . $mysqli->error) . '">');
+		//echo _('<meta HTTP-EQUIV="refresh" content="0; url=error.php?errmsg=' . urlencode("Failed to create photos table. " . "(" . $mysqli->errno . ") " . $mysqli->error) . '">');
 	}
 	else
 	{
 		echo "Successfully created table: Photos<br/>";
 	}
 	
-        if(!mkdir("uploads/" . $_POST["familyname"], 0777, true)) 
-        	die('Failed to create upload folder...');
-	else
-		echo "Created photo folder Successfully<br/>";
+        if(!file_exists("uploads/" . $_POST["familyname"]))
+			if(!mkdir("uploads/" . $_POST["familyname"]))
+				die('Failed to create upload folder...');
+			else
+				echo "Created photo folder Successfully<br/>";
         		
-        if(!mkdir("uploads/" . $_POST["familyname"] . "/thumbnails", 0777, true)) 
-        	die('Failed to create thumbnails folder...');
-	else
-		echo "Created thumbnail folder Successfully<br/>";
+		if(!file_exists("uploads/" . $_POST["familyname"] . "/thumbnails"))		
+			if(!mkdir("uploads/" . $_POST["familyname"] . "/thumbnails", 0777, true)) 
+				die('Failed to create thumbnails folder...');
+			else
+				echo "Created thumbnail folder Successfully<br/>";
 	
 	//TODO: Add a foreign key to a "comments" or "activity" table (maybe split that into 2 ?)
 	/*

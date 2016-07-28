@@ -1,5 +1,5 @@
 <?php
-	include '../util.php';
+	include '../../util/util.php';
 	include 'sbutil.php';
 	print_page_dec(__FILE__);
 ?>
@@ -45,15 +45,15 @@
         </ul>
       </div>
     </div>
-    
+	
     <!-- Left Side (Main Content)-->
     <div id="main">
       <div class="box">
         <div style="float:left"><h1><?php echo _('Create New <span class="white">Family Line</span>'); ?></h1></div>
-        <?php 
+        <?php
         	if(!isset($_POST["familyname"]))
         	{
-			echo _('<meta HTTP-EQUIV="refresh" content="0; url=error.php">');
+				echo _('<meta HTTP-EQUIV="refresh" content="0; url=error.php">');
         		die();
         	}
        ?>
@@ -67,8 +67,8 @@
         <br/>
         <br/>
         <div class="blurb" style="clear:left">
-        <?php 
-        	createDB($_POST["familyname"]); 
+        <?php
+        	createDB($_POST["familyname"]);
         ?>
         </div>
    

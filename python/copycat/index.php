@@ -1,5 +1,12 @@
 <?php
-	include '../../php/util.php';
+	include '../../util/util.php';
+	$curLang = "en";
+	if(isSet($_GET["locale"]))
+		$curLang = "jp";
+	
+	if(strcmp($curLang, "jp") === 0)
+		change_language();
+		
 	print_page_dec(__FILE__);
 ?>
 
@@ -44,17 +51,15 @@
     
     <!-- Left Side (Main Content)-->
     <div id="main">
-      
       <div class="box">
-        <h1><?php echo _('Python > <span class="white">Copy Cat</span>'); ?></h1>
+        <h1><?php echo _('Python > <span class="white">CopyCat</span>'); ?></h1>
         <p>
-        Download the CopyCat server and client <a href="copycat-client-server.zip">here</a><br/>
+        Download the CopyCat server and client <a href="copycat-client-server.zip" class="download-links">here</a><br/>
         OR<br/>
-        Access my CopyCat <a href="https://github.com/spencerbartz/copycat">repository on GitHub</a>
+        Access my CopyCat <a href="https://github.com/spencerbartz/copycat" class="download-links">repository on GitHub</a>
         </p>
         <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>
       </div>
-    
     </div>
     <!-- content-wrap ends here -->
   </div>

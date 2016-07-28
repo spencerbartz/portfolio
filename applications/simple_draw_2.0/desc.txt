@@ -1,2 +1,2 @@
-SimpleDraw 2.0 is an MS-Paint style graphics program. Whereas SimpleDraw 1.0 was an Applet, which modern browsers do not support. SimpleDraw 2.0 offers the stability of a Desktop application with the safety of being a stand-alone desktop app.Download the .jar file double click it, or run from command line:<br/>
+SimpleDraw 2.0 is an MS-Paint style graphics program (v1.0 was an Applet, yick!). It offers the stability of a Desktop application with the safety a stand-alone desktop app. Download the <b>.jar</b> and file double click it to run SimpleDraw. If your system is not configured to execute .jar files, run it from a terminal like so: 
 <strong>$java -jar simpledraw2.0.jar</strong>

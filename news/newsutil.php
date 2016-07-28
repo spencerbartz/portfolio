@@ -4,27 +4,26 @@
 
 	function print_news_links()
 	{
-		include 'dbconnect.php';
-    	$mysqli = get_mysqli_connection("newsdb");	
+    	$json = get_json_config();
+		$mysqli = get_mysqli_connection("newsdb");
 		$res = $mysqli->query("select id, dateposted, substring(posttext, 1, 100) as preview from posts");
     	
     		if(!$res)
     			return false;
         
     		if($res->num_rows > 0)
-    		{
     			while($row = $res->fetch_assoc())
-    			{
-    				echo '<tr class="row-a"><td class="first"><a href="newsadmin.php?postid=' .  $row["id"] . '">' . $row["id"] . '</a></td><td><a href="newsadmin.php?postid=' .  $row["id"] . '">' . $row["dateposted"] . "</a></td><td>" . $row["preview"] . '...</td><td><a href="newsadmin.php?postid='. $row["id"] . '">Edit</a> / <a href="#" onclick="deleteWarning(' . $row["id"] . ');">Delete</a></td></tr>'; 
-			}
-		}
+    				echo '<tr class="row-a"><td class="first"><a href="newsadmin.php?postid=' .
+								$row["id"] . '">' . $row["id"] . '</a></td><td><a href="newsadmin.php?postid=' .
+								$row["id"] . '">' . $row["dateposted"] . "</a></td><td>" . $row["preview"] .
+								'...</td><td><a href="newsadmin.php?postid='. $row["id"] .
+								'">Edit</a> / <a href="#" onclick="deleteWarning(' . $row["id"] . ');">Delete</a></td></tr>'; 
 	}
 	
 	function delete_post()
 	{
 		if(isset($_GET["deleteid"]))
 		{
-			include 'dbconnect.php';
 			$mysqli = get_mysqli_connection("newsdb");
 			$sql = "delete from posts where id=" . $_GET["deleteid"];
 			$res = $mysqli->query($sql);
@@ -48,8 +47,8 @@
 
 	function process_params()
 	{
-		include 'dbconnect.php';
 		$sql = "";
+		$mysqli = get_mysqli_connection("newsdb");
 		if(isset($_POST["posttext"]) )
 		{
 			if(isset($_POST["postid"]))

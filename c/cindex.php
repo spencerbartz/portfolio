@@ -45,22 +45,22 @@
     <!-- Left Side (Main Content)-->
     <div id="main">
       <div class="box">
-        <h1><?php echo _('JavaScript <span class="white">Projects</span>'); ?></h1>
+        <h1><?php echo _('C Programming <span class="white">Projects</span> is currently under construction!'); ?></h1>
         <p>
         <?php
-		echo _('This page contains projects I have programmed in C. ' .
-					'So far these are two libraries I made  for both logging and making socket connections' .
-					'The libraries currently only work on FreeBSD or Linux. I will add POSIX and maybe WinSock' .
-					'support in the future');
+		//echo _('This page contains projects I have programmed in C. ' .
+		//			'So far these are two libraries I made  for both logging and making socket connections' .
+		//			'The libraries currently only work on FreeBSD or Linux. I will add POSIX and maybe WinSock' .
+		//			'support in the future');
         ?>
         </p>
         <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>
       </div>
       
       <div class="box">
-        <h1><?php echo _('Latest <span class="white">Projects</span>'); ?></h1>
+        <h1><?php //echo _('Latest <span class="white">Projects</span>'); ?></h1>
         <?php 
-        	print_project_links(); 
+        	//print_project_links(); 
         ?>
       </div>
       <br/>

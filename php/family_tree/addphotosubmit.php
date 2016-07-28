@@ -1,5 +1,5 @@
 <?php
-	include '../util.php';
+	include '../../util/util.php';
 	include 'sbutil.php';		
 	print_page_dec(__FILE__);
 ?>

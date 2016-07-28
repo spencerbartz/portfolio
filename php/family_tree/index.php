@@ -1,5 +1,5 @@
 <?php
-	include '../util.php';
+	include '../../util/util.php';
 	include 'sbutil.php';
 	print_page_dec(__FILE__);
 ?>
@@ -8,6 +8,7 @@
 <?php sbIncludes(); ?>
 </head>
 <body>
+
 <!-- header starts here -->
 <div id="header">
   <div id="header-content">
@@ -16,6 +17,7 @@
   ?>
   </div>
 </div>
+
 <!-- navigation starts here -->
 <div id="nav-wrap">
   <div id="nav">
@@ -29,23 +31,13 @@
   <div id="content">
     <div id="sidebar" >
       <div class="sep"></div>
-      <div class="sidebox">
-         <?php
-         	$curDB = getCurDB();
-         	echo '<div class="dropdown">';
-         	printMenu($_SERVER['PHP_SELF'], $curDB);
-        	echo '</div>';
-        ?>
-      </div>
-      <div class="sidebox">
-      </div>
     </div>
     
     <!-- Left Side (Main Content)-->
     <div id="main">
-    
       <div class="box">
-        <div style="float:left"><h1><?php echo _('Welcome to Stammbaum: <span class="white">The Family Tree Database</span>'); ?></h1></div>
+        <div style="float:left"><h1><?php echo _('Welcome to <span class="white">The Family Tree Photo Database</span>'); ?></h1></div>
+         	<div class="dropdown" style="clear:both"><?php $curDB = getCurDB();printMenu($_SERVER['PHP_SELF'], $curDB); ?></div>
         	<?php 
         		if(isset($_GET["lineselect"]))
         		{

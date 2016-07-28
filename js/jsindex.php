@@ -48,9 +48,9 @@
         <h1><?php echo _('JavaScript <span class="white">Projects</span>'); ?></h1>
         <p>
         <?php
-		echo _('This page contains projects I have programmed in Java . ' . 
-					'While projects in the PHP section, as well as this whole site itself include ' .
-					'JavaScript, this section is intended for projects focusing on UX and aesthetics.');
+		echo _('This page contains projects I have programmed in JavaScript. ' . 
+					'Many projects on this site use JavaScript, but this section is intended for projects focusing on UI/UX and aesthetics, '.
+					'as well taking advantage of the fun and entertainment possible through HTML5 and JavaScript.');
         ?>
         </p>
         <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>

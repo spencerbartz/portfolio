@@ -52,13 +52,12 @@
         <h1><?php println(_('Welcome to <span class="white">spencerbartz.com</span>')); ?></h1>
         <p>
         <?php 
-        	$desc = _("This site is a compilation of some of my programming projects in PHP, SQL, Java, Javascript, and more to come. " .
-        	"Web based projects can be run without installing additional software. Java and Python however require installation of " .
-        	"a separate runtime environment. Links to those downloads can be found at the bottom of the page. " .
+        	$desc = _("This site is a compilation of some of my various programming projects using a variety of languages. " .
+        	"Web based projects can be run as-is. Java and Python require installation of " .
+        	"a separate runtime environment. Links to those downloads are at the bottom of the page. " .
 			"The site itself is written using PHP, JavaScript, and MySQL. " .
 			"I changed the original CSS, taken from <a href=\"http://www.styleshout.com\">styleshout.com</a> , to " .
-			"meet the aesthetic and functional requirements of this website. <br/>" .
-		   "<strong>This site is a work in progress. If something doesn't work right, feel free to report a bug!</strong>");
+			"meet the aesthetic and functional requirements of this website. <br/>");
 			
 			println($desc);
         ?>

@@ -1,5 +1,5 @@
 <?php
-	include '../util.php';
+	include '../../util/util.php';
 	include 'sbutil.php';
 	print_page_dec(__FILE__);
 ?>
@@ -8,6 +8,7 @@
 <?php sbIncludes(); ?>
 </head>
 <body>
+	
 <!-- header starts here -->
 <div id="header">
   <div id="header-content">
@@ -16,6 +17,7 @@
   ?>
   </div>
 </div>
+
 <!-- navigation starts here -->
 <div id="nav-wrap">
   <div id="nav">

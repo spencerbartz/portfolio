@@ -10,7 +10,7 @@ Forum Debug
 
 function printTable($table_name)
 {
-	include 'dbconnect.php';
+	include '../../util/util.php';
 	$res = $mysqli->query("SELECT * FROM " . $table_name);
 	
 	if(!$res)
