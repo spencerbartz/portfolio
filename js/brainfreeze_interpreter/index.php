@@ -22,7 +22,19 @@
 
     <!-- Main Content (lower part of page) -->
     <div id="main-content">
-                <!-- Ascii To Brainfuck converter Div-->
+        
+        <!-- Instructions -->
+        <div id="instructions" class="rounded">
+            <h3><?php echo _("Instructions"); ?></h3>
+            <p>
+                <div id="description">
+                    This is a div and stuff
+                    here is the second line blah
+                </div>
+            </p>
+        </div>    
+
+        <!-- Ascii To Brainfuck converter Div-->
         <div id="converter" class="rounded">
             <h3><?php echo _("Text to BrainFreeze Converter"); ?></h3>
             <p>

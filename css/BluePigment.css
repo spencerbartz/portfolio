@@ -720,6 +720,7 @@ div.uploadmenu
 #searchbox
 {
 	z-index: 201;
+	box-shadow: 5px 5px 10px #1555D5;
 }
 
 /*overlay div to dim the screen when the lightbox is active*/
