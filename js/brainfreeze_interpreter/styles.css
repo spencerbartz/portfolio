@@ -105,5 +105,6 @@ textarea:focus {
 }
 
 #description {
-	color: red;
+	color: black;
+	width: 310px;
 }

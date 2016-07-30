@@ -25,11 +25,13 @@
         
         <!-- Instructions -->
         <div id="instructions" class="rounded">
-            <h3><?php echo _("Instructions"); ?></h3>
+            <h3><?php echo _("What is BrainFreeze?"); ?></h3>
             <p>
                 <div id="description">
-                    This is a div and stuff
-                    here is the second line blah
+                BrainFreeze is a programming language that consists of merely 8 characters: { [ ] > < . , + - } but can be used to create an infinite number programs. I thought it would be an interesting challenge
+                to try and make an interpreter that could both parse and run the BrainFreeze code. BrainFreeze is an exact clone of <a href="https://en.wikipedia.org/wiki/Brainfuck">this programming language</a>.
+                However, this is a professional portfolio so I renamed it. Technically BrainFreeze is a subset of its parent language since it does not support input.
+                It will be added in the next iteration to make BrainFreeze a truly Turing-Complete language. Refer to the wikipedia page for instructions on usage.
                 </div>
             </p>
         </div>    
@@ -38,7 +40,7 @@
         <div id="converter" class="rounded">
             <h3><?php echo _("Text to BrainFreeze Converter"); ?></h3>
             <p>
-            <textarea id="conv_input" class="rounded" placeholder="Type a message in plain text then press the Convert button to see the result below."></textarea>
+            <textarea id="conv_input" class="rounded" placeholder="Type a message in plain text then press the Convert button to see the resulting BrainFreeze code below."></textarea>
             <input id="submit_conv_input" type="submit" class="rounded" value="Convert" onclick="BFI.asciiToBF('conv_input')" />
             </p>
             <p>
@@ -51,7 +53,7 @@
         <div id="interpreter" class="rounded">
             <h3><?php echo _("BrainFreeze to text Interpreter"); ?></h3>
             <p>
-            <textarea id="intrp_input" class="rounded" placeholder="Enter raw BrainFreeze code here and you can crack any decipher any brain freeze code!"></textarea>
+            <textarea id="intrp_input" class="rounded" placeholder="Enter raw BrainFreeze code here and you can decipher any BrainFreeze source code."></textarea>
             <input id="submit_intrp_input" type="submit" class="rounded" value="Interpret BrainFreeze Code" onclick="BFI.interpret('intrp_input')" />
             </p>
             <p>
