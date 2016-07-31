@@ -107,4 +107,5 @@ textarea:focus {
 #description {
 	color: black;
 	width: 310px;
+	line-height: 125%;
 }
