@@ -1,6 +1,7 @@
 <?php
 	include "string_util.php";
 	include "path_util.php";
+	include "news_util.php";
 	include "dbconnect.php";
 		
 	$default_locale = "en_US";
@@ -176,27 +177,6 @@
 					closedir($dh);
 				}
 		}
-	}
-
-	function print_news()
-	{
-		$mysqli = get_mysqli_connection("newsdb");
-		$sql = "select posttext, hashtags, dateposted from newsdb.posts order by dateposted desc";
-		
-		if(!$res = $mysqli->query($sql))
-			die("Failed to select post: (" . $mysqli->errno . ") " . $mysqli->error);
-		
-		if($res->num_rows > 0)
-		{
-			while($row = $res->fetch_assoc())
-			{
-				println('<div class="box">');
-				println('<h1>Latest <span class="white">News:</span><span> ' . date('F jS, Y', strtotime($row['dateposted'])) . '</span></h1>');
-				println('<p>' . $row['posttext'] . '</p>');
-				println('<p class="post-footer align-right"> <span class="date">Date Posted: ' . $row['dateposted'] . '</span> </p>');
-				println('</div>');
-			}
-		}	
 	}
 
 	function print_footer($file)

@@ -1,5 +1,5 @@
 <?php
-	include 'util/util.php';
+	include '../util/util.php';
 	print_page_dec(__FILE__);
 ?>
 
@@ -43,8 +43,8 @@
 			<?php print_search_box(__FILE__) ?>
 		</div>
 		<div class="sidebox" id="newsarchive">
-			<div class="box-title">News Archives<br/>
-			<?php print_news_links(); ?>
+			<div class="box-title">News Archives
+				<?php print_news_links(); ?>
 			</div>
 		</div> 
     </div>
@@ -56,24 +56,11 @@
         <h1><?php println(_('Welcome to <span class="white">spencerbartz.com</span>')); ?></h1>
         <p>
         <?php 
-        	$desc = _("This site is a compilation of some of my various programming projects using a variety of languages. " .
-        	"Web based projects can be run as-is. Java and Python require installation of " .
-        	"a separate runtime environment. Links to those downloads are at the bottom of the page. " .
-			"All site functionality you see e.g. search and news archives are written from scratch in 	PHP, JavaScript, and MySQL. " .
-			"I changed the original CSS, taken from <a href=\"http://www.styleshout.com\">styleshout.com</a>, to " .
-			"meet the aesthetic and functional requirements of this website. The full source code of this entire site is available as a public ".
-			"<a href=\"https://github.com/spencerbartz/spencerbartz.com\"> repository on GitHub.</a>" );
-			
-			println($desc);
+			print_archived_story($_GET["id"]);
         ?>
         </p>
         <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>
       </div>
-
-	<?php
-		print_news();	
-	?>
-      
     </div>
 
     <!-- content-wrap ends here -->

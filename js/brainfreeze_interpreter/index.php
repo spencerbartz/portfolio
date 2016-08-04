@@ -33,6 +33,7 @@
                 BrainFreeze is an exact clone of <a href="https://en.wikipedia.org/wiki/Brainfuck">this programming language</a>.
                 However, this is a professional portfolio so I renamed it. Technically BrainFreeze is a subset of its parent language since it does not support input.
                 It will be added in the next iteration to make BrainFreeze a truly Turing-Complete language. Refer to the <a href="https://en.wikipedia.org/wiki/Brainfuck">wikipedia page</a> for instructions on usage.
+                If you need to debug a BrainFreeze program, use the # character and open JavaScript console.
                 </div>
             </p>
         </div>    

@@ -26,7 +26,8 @@ body {
 a {
 	color: #003366;
 	background-color: inherit;
-	text-decoration: none;		
+	text-decoration: none;
+	font-weight: bold;
 }
 a:hover {
 	color: #FAA34B; 
@@ -721,6 +722,10 @@ div.uploadmenu
 {
 	z-index: 201;
 	box-shadow: 5px 5px 10px #1555D5;
+}
+
+.box-title {
+	padding: 10px;
 }
 
 /*overlay div to dim the screen when the lightbox is active*/

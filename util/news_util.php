@@ -6,18 +6,26 @@
 	{
     	$json = get_json_config();
 		$mysqli = get_mysqli_connection("newsdb");
-		$res = $mysqli->query("select id, dateposted, substring(posttext, 1, 100) as preview from posts");
-    	
-    		if(!$res)
-    			return false;
-        
-    		if($res->num_rows > 0)
-    			while($row = $res->fetch_assoc())
-    				echo '<tr class="row-a"><td class="first"><a href="newsadmin.php?postid=' .
-								$row["id"] . '">' . $row["id"] . '</a></td><td><a href="newsadmin.php?postid=' .
-								$row["id"] . '">' . $row["dateposted"] . "</a></td><td>" . $row["preview"] .
-								'...</td><td><a href="newsadmin.php?postid='. $row["id"] .
-								'">Edit</a> / <a href="#" onclick="deleteWarning(' . $row["id"] . ');">Delete</a></td></tr>'; 
+
+		//Print links to news stories, counting down from last year		
+		for($i = intval(date("Y")) - 1; $i > 2013; $i--)
+		{
+			println($i, TRUE);
+			println("<ul>");
+
+			$sql = "SELECT id, dateposted FROM posts WHERE YEAR(dateposted) = " . $i . " ORDER BY dateposted DESC";
+			$res = $mysqli->query($sql);
+		
+			if($res->num_rows > 0)
+			{
+				while($row = $res->fetch_assoc())
+				{
+					$path = basename(getcwd()) == "news" ? "" : "news" . DIRECTORY_SEPARATOR;
+					println('<li><a href="' . $path . 'news_archive_view.php?id=' . $row["id"] . '">' . date("m/d/y", strtotime($row["dateposted"])) . "</a></li>");
+				}
+			}
+			println("</ul>");
+		}
 	}
 	
 	function delete_post()
@@ -109,6 +117,27 @@
 		}		
 	}
 	
+	function print_news()
+	{
+		$mysqli = get_mysqli_connection("newsdb");
+		$sql = "select posttext, hashtags, dateposted from newsdb.posts order by dateposted desc";
+		
+		if(!$res = $mysqli->query($sql))
+			die("Failed to select post: (" . $mysqli->errno . ") " . $mysqli->error);
+		
+		if($res->num_rows > 0)
+		{
+			while($row = $res->fetch_assoc())
+			{
+				println('<div class="box">');
+				println('<h1>Latest <span class="white">News:</span><span> ' . date('F jS, Y', strtotime($row['dateposted'])) . '</span></h1>');
+				println('<p>' . $row['posttext'] . '</p>');
+				println('<p class="post-footer align-right"> <span class="date">Date Posted: ' . $row['dateposted'] . '</span> </p>');
+				println('</div>');
+			}
+		}	
+	}
+	
 	function news_post_text()
 	{
 		echo $GLOBALS["posttext"];
@@ -117,5 +146,24 @@
 	function news_post_Id()
 	{
 		echo $GLOBALS["postid"];
+	}
+
+	function print_archived_story($id)
+	{
+		if(!isset($id))
+			return "News Story ID not provided";
+		else
+		{
+			$mysqli = get_mysqli_connection("newsdb");
+			$sql = "SELECT * FROM posts WHERE id = " . $id . " LIMIT 1";
+			if(!$res = $mysqli->query($sql))
+				die("Failed to select post: (" . $mysqli->errno . ") " . $mysqli->error);
+				
+			if($res->num_rows > 0)
+			{
+				$row = $res->fetch_assoc();
+				println($row["posttext"]);
+			}	
+		}
 	}
 ?>
