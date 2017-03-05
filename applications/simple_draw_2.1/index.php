@@ -53,9 +53,9 @@
     <div id="main">
       
       <div class="box">
-        <h1><?php echo _('Java Apps > <span class="white">Simple Draw 2.0</span>'); ?></h1>
+        <h1><?php echo _('Java Apps > <span class="white">Simple Draw 2.1</span>'); ?></h1>
         <p>
-        Download the desktop Simple Draw 2.0 app <a href="simpledraw2.0.jar" class="download-links">here</a><br/>
+        Download the desktop Simple Draw 2.1 app <a href="simpledraw2.1.jar" class="download-links">here</a><br/>
         </p> 
         <p class="post-footer align-right"><span class="date"><?php last_updated(__FILE__); ?></span> </p>
       </div>
